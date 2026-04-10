@@ -5,6 +5,7 @@ const nextConfig: NextConfig = {
     images: {
         unoptimized: true,
     },
+    serverExternalPackages: ['child_process'],
 };
 
 export default nextConfig;

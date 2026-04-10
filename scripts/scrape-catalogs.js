@@ -34,6 +34,8 @@ const ENRICH_API = (pubNum, page) =>
 
 const OUTPUT_DIR = path.join(__dirname, '..', 'public', 'catalogs');
 const DATA_FILE = path.join(__dirname, '..', 'src', 'data', 'catalogs-scraped.json');
+const LOG_DIR = path.join(__dirname, '..', 'logs');
+const LOG_FILE = path.join(LOG_DIR, 'scraper.log');
 
 const UA = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36';
 const REFERER = 'https://www.tiendeo.ro/';
@@ -431,51 +433,96 @@ async function scrapeCatalog(catalog) {
     };
 }
 
+/**
+ * Append a JSON log entry to logs/scraper.log
+ */
+function writeLog(entry) {
+    if (!fs.existsSync(LOG_DIR)) fs.mkdirSync(LOG_DIR, { recursive: true });
+    const line = JSON.stringify(entry) + '\n';
+    fs.appendFileSync(LOG_FILE, line, 'utf-8');
+}
+
 async function main() {
     console.log('━━━ Lidl Catalog Scraper (tiendeo/Shopfully) ━━━\n');
     console.log(`Listing: ${LISTING_URL}\n`);
 
-    const listingHtml = (await fetchUrl(LISTING_URL)).toString('utf-8');
-    const rawCatalogs = parseListingCatalogs(listingHtml);
-    console.log(`Found ${rawCatalogs.length} catalogs in JSON-LD\n`);
+    const startTime = Date.now();
+    const logEntry = {
+        timestamp: new Date().toISOString(),
+        status: 'running',
+        catalogsFound: 0,
+        catalogsScraped: 0,
+        totalPages: 0,
+        totalProducts: 0,
+        errors: [],
+        durationMs: 0,
+    };
 
-    if (!rawCatalogs.length) {
-        console.log('⚠  No catalogs parsed. tiendeo.ro structure may have changed.');
-        process.exit(1);
-    }
+    try {
+        const listingHtml = (await fetchUrl(LISTING_URL)).toString('utf-8');
+        const rawCatalogs = parseListingCatalogs(listingHtml);
+        console.log(`Found ${rawCatalogs.length} catalogs in JSON-LD\n`);
+        logEntry.catalogsFound = rawCatalogs.length;
 
-    const results = [];
-    for (const raw of rawCatalogs) {
-        if (!raw.startDate || !raw.endDate) {
-            console.log(`⊙  Skip "${raw.title}" — missing dates`);
-            continue;
+        if (!rawCatalogs.length) {
+            logEntry.status = 'error';
+            logEntry.errors.push('No catalogs parsed — tiendeo.ro structure may have changed');
+            logEntry.durationMs = Date.now() - startTime;
+            writeLog(logEntry);
+            console.log('No catalogs parsed.');
+            process.exit(1);
         }
-        try {
-            const scraped = await scrapeCatalog(raw);
-            if (scraped) results.push(scraped);
-        } catch (err) {
-            console.log(`  ✗ failed: ${err.message}`);
+
+        const results = [];
+        for (const raw of rawCatalogs) {
+            if (!raw.startDate || !raw.endDate) {
+                console.log(`⊙  Skip "${raw.title}" — missing dates`);
+                logEntry.errors.push(`Skip "${raw.title}" — missing dates`);
+                continue;
+            }
+            try {
+                const scraped = await scrapeCatalog(raw);
+                if (scraped) results.push(scraped);
+            } catch (err) {
+                console.log(`  ✗ failed: ${err.message}`);
+                logEntry.errors.push(`${raw.title}: ${err.message}`);
+            }
+            console.log('');
         }
-        console.log('');
+
+        // Sort: active first, then by startDate desc
+        results.sort((a, b) => {
+            if (a.isActive !== b.isActive) return a.isActive ? -1 : 1;
+            return b.startDate.localeCompare(a.startDate);
+        });
+
+        fs.mkdirSync(path.dirname(DATA_FILE), { recursive: true });
+        fs.writeFileSync(DATA_FILE, JSON.stringify(results, null, 2), 'utf-8');
+
+        const totalPages = results.reduce((s, c) => s + c.pages.length, 0);
+        const totalProducts = results.reduce((s, c) => s + (c.products || []).length, 0);
+
+        logEntry.status = 'success';
+        logEntry.catalogsScraped = results.length;
+        logEntry.totalPages = totalPages;
+        logEntry.totalProducts = totalProducts;
+        logEntry.activeCatalogs = results.filter(r => r.isActive).length;
+        logEntry.durationMs = Date.now() - startTime;
+        writeLog(logEntry);
+
+        console.log(`━━━ Done ━━━`);
+        console.log(`✓ ${results.length} catalogs → ${path.relative(process.cwd(), DATA_FILE)}`);
+        console.log(`  Active: ${results.filter(r => r.isActive).length}`);
+        console.log(`  Archive: ${results.filter(r => !r.isActive).length}`);
+        console.log(`  Total pages: ${totalPages}`);
+        console.log(`  Total products: ${totalProducts}`);
+    } catch (err) {
+        logEntry.status = 'error';
+        logEntry.errors.push(err.message);
+        logEntry.durationMs = Date.now() - startTime;
+        writeLog(logEntry);
+        throw err;
     }
-
-    // Sort: active first, then by startDate desc
-    results.sort((a, b) => {
-        if (a.isActive !== b.isActive) return a.isActive ? -1 : 1;
-        return b.startDate.localeCompare(a.startDate);
-    });
-
-    fs.mkdirSync(path.dirname(DATA_FILE), { recursive: true });
-    fs.writeFileSync(DATA_FILE, JSON.stringify(results, null, 2), 'utf-8');
-
-    console.log(`━━━ Done ━━━`);
-    console.log(`✓ ${results.length} catalogs → ${path.relative(process.cwd(), DATA_FILE)}`);
-    console.log(`  Active: ${results.filter(r => r.isActive).length}`);
-    console.log(`  Archive: ${results.filter(r => !r.isActive).length}`);
-    const totalPages = results.reduce((s, c) => s + c.pages.length, 0);
-    const totalProducts = results.reduce((s, c) => s + (c.products || []).length, 0);
-    console.log(`  Total pages: ${totalPages}`);
-    console.log(`  Total products: ${totalProducts}`);
 }
 
 main().catch(err => {
