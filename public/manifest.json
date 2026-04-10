@@ -1,0 +1,26 @@
+{
+  "name": "Catalog Lidl România",
+  "short_name": "Catalog Lidl",
+  "description": "Catalogul Lidl actualizat săptămânal. Fără login, fără descărcare.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0050aa",
+  "theme_color": "#0050aa",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "ro-RO",
+  "categories": ["shopping", "lifestyle"],
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    }
+  ]
+}

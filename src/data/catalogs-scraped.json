@@ -1,0 +1,2623 @@
+[
+  {
+    "slug": "de-luni-06-04-pana-sambata-11-04-2026-04-06",
+    "sourceId": "53242",
+    "publicationId": "52519",
+    "title": "de luni 06.04 până sâmbătă 11.04",
+    "description": "Catalog Lidl valabil 2026-04-06 — 2026-04-12",
+    "startDate": "2026-04-06",
+    "endDate": "2026-04-12",
+    "coverImage": "/catalogs/de-luni-06-04-pana-sambata-11-04-2026-04-06/pages/page_01.webp",
+    "pages": [
+      {
+        "pageNumber": 1,
+        "imagePath": "/catalogs/de-luni-06-04-pana-sambata-11-04-2026-04-06/pages/page_01.webp",
+        "width": 1200,
+        "height": 2036
+      },
+      {
+        "pageNumber": 2,
+        "imagePath": "/catalogs/de-luni-06-04-pana-sambata-11-04-2026-04-06/pages/page_02.webp",
+        "width": 1200,
+        "height": 2036
+      },
+      {
+        "pageNumber": 3,
+        "imagePath": "/catalogs/de-luni-06-04-pana-sambata-11-04-2026-04-06/pages/page_03.webp",
+        "width": 1200,
+        "height": 2036
+      },
+      {
+        "pageNumber": 4,
+        "imagePath": "/catalogs/de-luni-06-04-pana-sambata-11-04-2026-04-06/pages/page_04.webp",
+        "width": 1200,
+        "height": 2036
+      },
+      {
+        "pageNumber": 5,
+        "imagePath": "/catalogs/de-luni-06-04-pana-sambata-11-04-2026-04-06/pages/page_05.webp",
+        "width": 1200,
+        "height": 2036
+      },
+      {
+        "pageNumber": 6,
+        "imagePath": "/catalogs/de-luni-06-04-pana-sambata-11-04-2026-04-06/pages/page_06.webp",
+        "width": 1200,
+        "height": 2036
+      },
+      {
+        "pageNumber": 7,
+        "imagePath": "/catalogs/de-luni-06-04-pana-sambata-11-04-2026-04-06/pages/page_07.webp",
+        "width": 1200,
+        "height": 2036
+      },
+      {
+        "pageNumber": 8,
+        "imagePath": "/catalogs/de-luni-06-04-pana-sambata-11-04-2026-04-06/pages/page_08.webp",
+        "width": 1200,
+        "height": 2036
+      },
+      {
+        "pageNumber": 9,
+        "imagePath": "/catalogs/de-luni-06-04-pana-sambata-11-04-2026-04-06/pages/page_09.webp",
+        "width": 1200,
+        "height": 2036
+      },
+      {
+        "pageNumber": 10,
+        "imagePath": "/catalogs/de-luni-06-04-pana-sambata-11-04-2026-04-06/pages/page_10.webp",
+        "width": 1200,
+        "height": 2036
+      }
+    ],
+    "hotspots": {
+      "1": [
+        {
+          "id": "69ccb6b3-107c-4815-876f-369e0ad3014f",
+          "page": 1,
+          "crop": {
+            "x": 0.55083,
+            "y": 0.39047,
+            "w": 0.2175,
+            "h": 0.33055
+          },
+          "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69ccb6b3-107c-4815-876f-369e0ad3014f"
+        },
+        {
+          "id": "69ccb6b4-12a4-43b4-ba6b-00670ad301b2",
+          "page": 1,
+          "crop": {
+            "x": 0.77,
+            "y": 0.3831,
+            "w": 0.2175,
+            "h": 0.34234
+          },
+          "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69ccb6b4-12a4-43b4-ba6b-00670ad301b2"
+        },
+        {
+          "id": "69ccb6b4-fc1c-49ff-a0e9-00670ad3022a",
+          "page": 1,
+          "crop": {
+            "x": 0.33667,
+            "y": 0.35904,
+            "w": 0.20917,
+            "h": 0.36493
+          },
+          "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69ccb6b4-fc1c-49ff-a0e9-00670ad3022a"
+        },
+        {
+          "id": "69ccb6b5-66c0-4851-b4fb-48090ad301d1",
+          "page": 1,
+          "crop": {
+            "x": 0.00667,
+            "y": 0.47102,
+            "w": 0.32417,
+            "h": 0.25147
+          },
+          "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69ccb6b5-66c0-4851-b4fb-48090ad301d1"
+        },
+        {
+          "id": "69ccb6b6-bde8-49e0-8dc7-00610ad3016e",
+          "page": 1,
+          "crop": {
+            "x": 0.33167,
+            "y": 0.73379,
+            "w": 0.32833,
+            "h": 0.21857
+          },
+          "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69ccb6b6-bde8-49e0-8dc7-00610ad3016e"
+        },
+        {
+          "id": "69ccb6b7-d970-4c2e-ba36-48350ad302f8",
+          "page": 1,
+          "crop": {
+            "x": 0.00417,
+            "y": 0.7279,
+            "w": 0.32333,
+            "h": 0.22544
+          },
+          "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69ccb6b7-d970-4c2e-ba36-48350ad302f8"
+        },
+        {
+          "id": "69ccb6b7-ec78-4eda-85eb-00e50ad3002a",
+          "page": 1,
+          "crop": {
+            "x": 0.66333,
+            "y": 0.73183,
+            "w": 0.3275,
+            "h": 0.22053
+          },
+          "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69ccb6b7-ec78-4eda-85eb-00e50ad3002a"
+        }
+      ],
+      "2": [
+        {
+          "id": "69ccb6b3-2ddc-4195-9cea-29bc0ad302f8",
+          "page": 2,
+          "crop": {
+            "x": 0.04167,
+            "y": 0.55157,
+            "w": 0.9275,
+            "h": 0.39587
+          },
+          "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69ccb6b3-2ddc-4195-9cea-29bc0ad302f8"
+        },
+        {
+          "id": "69ccb6b4-80bc-4344-87d5-26070ad300c5",
+          "page": 2,
+          "crop": {
+            "x": 0.04,
+            "y": 0.0609,
+            "w": 0.92,
+            "h": 0.40864
+          },
+          "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69ccb6b4-80bc-4344-87d5-26070ad300c5"
+        }
+      ],
+      "3": [
+        {
+          "id": "69ccb6b5-0eb4-4d9b-b410-faa50ad30242",
+          "page": 3,
+          "crop": {
+            "x": 0.03083,
+            "y": 0.49361,
+            "w": 0.94333,
+            "h": 0.4499
+          },
+          "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69ccb6b5-0eb4-4d9b-b410-faa50ad30242"
+        },
+        {
+          "id": "69ccb6b5-f7a4-4207-be73-4ff30ad302c0",
+          "page": 3,
+          "crop": {
+            "x": 0.04667,
+            "y": 0.07122,
+            "w": 0.92,
+            "h": 0.40177
+          },
+          "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69ccb6b5-f7a4-4207-be73-4ff30ad302c0"
+        }
+      ],
+      "4": [
+        {
+          "id": "69ccb6b6-09d4-4285-bd61-33980ad3014f",
+          "page": 4,
+          "crop": {
+            "x": 0.00583,
+            "y": 0.16208,
+            "w": 0.99083,
+            "h": 0.35609
+          },
+          "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69ccb6b6-09d4-4285-bd61-33980ad3014f"
+        },
+        {
+          "id": "69ccb6b7-1d58-44ab-8ecc-2c8b0ad300c5",
+          "page": 4,
+          "crop": {
+            "x": 0.51167,
+            "y": 0.59037,
+            "w": 0.48333,
+            "h": 0.36198
+          },
+          "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69ccb6b7-1d58-44ab-8ecc-2c8b0ad300c5"
+        },
+        {
+          "id": "69ccb6b7-fda8-4a09-aa3a-0be80ad302be",
+          "page": 4,
+          "crop": {
+            "x": 0.00833,
+            "y": 0.59725,
+            "w": 0.49083,
+            "h": 0.35265
+          },
+          "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69ccb6b7-fda8-4a09-aa3a-0be80ad302be"
+        }
+      ],
+      "5": [
+        {
+          "id": "69ccb6b7-bdf0-4658-adf4-00ca0ad301b2",
+          "page": 5,
+          "crop": {
+            "x": 0.00833,
+            "y": 0.16454,
+            "w": 0.46083,
+            "h": 0.34136
+          },
+          "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69ccb6b7-bdf0-4658-adf4-00ca0ad301b2"
+        },
+        {
+          "id": "69ccb6b8-f544-4029-9236-d0090ad302bc",
+          "page": 5,
+          "crop": {
+            "x": 0.045,
+            "y": 0.55992,
+            "w": 0.58583,
+            "h": 0.39096
+          },
+          "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69ccb6b8-f544-4029-9236-d0090ad302bc"
+        },
+        {
+          "id": "69ccb6b9-aee0-4e92-8d2d-4bf30ad30208",
+          "page": 5,
+          "crop": {
+            "x": 0.49167,
+            "y": 0.16503,
+            "w": 0.50167,
+            "h": 0.33792
+          },
+          "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69ccb6b9-aee0-4e92-8d2d-4bf30ad30208"
+        }
+      ],
+      "6": [
+        {
+          "id": "69ccb6b9-a198-4a1c-b81d-00aa0ad3001d",
+          "page": 6,
+          "crop": {
+            "x": 0.375,
+            "y": 0.49804,
+            "w": 0.58667,
+            "h": 0.22446
+          },
+          "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69ccb6b9-a198-4a1c-b81d-00aa0ad3001d"
+        },
+        {
+          "id": "69ccb6ba-ef48-479a-850a-0fb50ad30244",
+          "page": 6,
+          "crop": {
+            "x": 0.00667,
+            "y": 0.72839,
+            "w": 0.32333,
+            "h": 0.22642
+          },
+          "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69ccb6ba-ef48-479a-850a-0fb50ad30244"
+        },
+        {
+          "id": "69ccb6ba-f44c-45b4-a681-00750ad3002a",
+          "page": 6,
+          "crop": {
+            "x": 0.33583,
+            "y": 0.72888,
+            "w": 0.32167,
+            "h": 0.22495
+          },
+          "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69ccb6ba-f44c-45b4-a681-00750ad3002a"
+        },
+        {
+          "id": "69ccb6bb-09d0-4559-bd63-4a870ad301f9",
+          "page": 6,
+          "crop": {
+            "x": 0.65917,
+            "y": 0.72937,
+            "w": 0.33167,
+            "h": 0.22544
+          },
+          "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69ccb6bb-09d0-4559-bd63-4a870ad301f9"
+        },
+        {
+          "id": "69ccb6bc-254c-403d-9d66-d62b0ad301f9",
+          "page": 6,
+          "crop": {
+            "x": 0.00833,
+            "y": 0.48969,
+            "w": 0.35417,
+            "h": 0.23281
+          },
+          "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69ccb6bc-254c-403d-9d66-d62b0ad301f9"
+        }
+      ],
+      "7": [
+        {
+          "id": "69ccb6bc-aec8-4879-b83b-f8af0ad300a2",
+          "page": 7,
+          "crop": {
+            "x": 0.5375,
+            "y": 0.49951,
+            "w": 0.44583,
+            "h": 0.40815
+          },
+          "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69ccb6bc-aec8-4879-b83b-f8af0ad300a2"
+        },
+        {
+          "id": "69ccb6bd-afe8-469a-abc3-f2600ad30242",
+          "page": 7,
+          "crop": {
+            "x": 0.0075,
+            "y": 0.63458,
+            "w": 0.52083,
+            "h": 0.27112
+          },
+          "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69ccb6bd-afe8-469a-abc3-f2600ad30242"
+        },
+        {
+          "id": "69ccb6bd-f0b4-4b9f-9db6-418e0ad30076",
+          "page": 7,
+          "crop": {
+            "x": 0.01083,
+            "y": 0.05747,
+            "w": 0.65333,
+            "h": 0.18468
+          },
+          "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69ccb6bd-f0b4-4b9f-9db6-418e0ad30076"
+        },
+        {
+          "id": "69ccb6be-74ac-4b1f-bec8-3e9c0ad30208",
+          "page": 7,
+          "crop": {
+            "x": 0.66417,
+            "y": 0.05501,
+            "w": 0.32667,
+            "h": 0.18664
+          },
+          "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69ccb6be-74ac-4b1f-bec8-3e9c0ad30208"
+        },
+        {
+          "id": "69ccb6bf-cbd8-44fe-ba1a-3a400ad300f1",
+          "page": 7,
+          "crop": {
+            "x": 0.0025,
+            "y": 0.25835,
+            "w": 0.33,
+            "h": 0.2279
+          },
+          "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69ccb6bf-cbd8-44fe-ba1a-3a400ad300f1"
+        },
+        {
+          "id": "69ccb6c0-27b4-4438-8ab1-4c640ad30076",
+          "page": 7,
+          "crop": {
+            "x": 0.33667,
+            "y": 0.25196,
+            "w": 0.31583,
+            "h": 0.23428
+          },
+          "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69ccb6c0-27b4-4438-8ab1-4c640ad30076"
+        },
+        {
+          "id": "69ccb6c1-e048-4a54-aca2-443d0ad30111",
+          "page": 7,
+          "crop": {
+            "x": 0.65667,
+            "y": 0.24705,
+            "w": 0.33583,
+            "h": 0.24067
+          },
+          "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69ccb6c1-e048-4a54-aca2-443d0ad30111"
+        }
+      ],
+      "9": [
+        {
+          "id": "69ccb6bd-158c-4d70-ad5f-41600ad30076",
+          "page": 9,
+          "crop": {
+            "x": 0.02,
+            "y": 0.00688,
+            "w": 0.97167,
+            "h": 0.92583
+          },
+          "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69ccb6bd-158c-4d70-ad5f-41600ad30076"
+        }
+      ],
+      "10": [
+        {
+          "id": "69ccb6c0-6360-4d03-bb27-00770ad30241",
+          "page": 10,
+          "crop": {
+            "x": 0.45167,
+            "y": 0.28438,
+            "w": 0.53167,
+            "h": 0.20383
+          },
+          "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69ccb6c0-6360-4d03-bb27-00770ad30241"
+        },
+        {
+          "id": "69ccb6c1-5bf8-4dcb-8aab-39510ad300f1",
+          "page": 10,
+          "crop": {
+            "x": 0.0075,
+            "y": 0.73527,
+            "w": 0.32583,
+            "h": 0.22004
+          },
+          "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69ccb6c1-5bf8-4dcb-8aab-39510ad300f1"
+        },
+        {
+          "id": "69ccb6c2-7034-42ce-910c-2de50ad300c5",
+          "page": 10,
+          "crop": {
+            "x": 0.00667,
+            "y": 0.51228,
+            "w": 0.32667,
+            "h": 0.21562
+          },
+          "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69ccb6c2-7034-42ce-910c-2de50ad300c5"
+        },
+        {
+          "id": "69ccb6c2-f94c-407c-9165-492c0ad301d1",
+          "page": 10,
+          "crop": {
+            "x": 0.33667,
+            "y": 0.73134,
+            "w": 0.31583,
+            "h": 0.22348
+          },
+          "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69ccb6c2-f94c-407c-9165-492c0ad301d1"
+        },
+        {
+          "id": "69ccb6c3-8380-4e58-bd30-00a40ad3002a",
+          "page": 10,
+          "crop": {
+            "x": 0.3375,
+            "y": 0.49754,
+            "w": 0.32333,
+            "h": 0.22888
+          },
+          "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69ccb6c3-8380-4e58-bd30-00a40ad3002a"
+        },
+        {
+          "id": "69ccb6c4-d11c-49c9-9961-33d70ad301f9",
+          "page": 10,
+          "crop": {
+            "x": 0.65917,
+            "y": 0.72741,
+            "w": 0.33167,
+            "h": 0.2279
+          },
+          "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69ccb6c4-d11c-49c9-9961-33d70ad301f9"
+        },
+        {
+          "id": "69ccb6c5-4058-4ab2-af69-46a40ad301e6",
+          "page": 10,
+          "crop": {
+            "x": 0.66667,
+            "y": 0.49558,
+            "w": 0.32167,
+            "h": 0.22839
+          },
+          "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69ccb6c5-4058-4ab2-af69-46a40ad301e6"
+        }
+      ]
+    },
+    "products": [
+      {
+        "id": "69ccb6b3-107c-4815-876f-369e0ad3014f",
+        "name": "Brânză proaspătă de vaci pentru prăjituri",
+        "price": 15.99,
+        "oldPrice": 20.99,
+        "discount": "-23%",
+        "page": 1,
+        "imagePath": "/catalogs/de-luni-06-04-pana-sambata-11-04-2026-04-06/crops/69ccb6b3-107c-4815-876f-369e0ad3014f.webp",
+        "crop": {
+          "x": 0.55083,
+          "y": 0.39047,
+          "w": 0.2175,
+          "h": 0.33055
+        },
+        "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69ccb6b3-107c-4815-876f-369e0ad3014f"
+      },
+      {
+        "id": "69ccb6b4-12a4-43b4-ba6b-00670ad301b2",
+        "name": "Ceafă de porc",
+        "price": 1.99,
+        "oldPrice": 2.79,
+        "discount": "-28%",
+        "page": 1,
+        "imagePath": "/catalogs/de-luni-06-04-pana-sambata-11-04-2026-04-06/crops/69ccb6b4-12a4-43b4-ba6b-00670ad301b2.webp",
+        "crop": {
+          "x": 0.77,
+          "y": 0.3831,
+          "w": 0.2175,
+          "h": 0.34234
+        },
+        "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69ccb6b4-12a4-43b4-ba6b-00670ad301b2"
+      },
+      {
+        "id": "69ccb6b4-fc1c-49ff-a0e9-00670ad3022a",
+        "name": "Zahăr",
+        "price": 2.99,
+        "oldPrice": 3.99,
+        "discount": "-25%",
+        "page": 1,
+        "imagePath": "/catalogs/de-luni-06-04-pana-sambata-11-04-2026-04-06/crops/69ccb6b4-fc1c-49ff-a0e9-00670ad3022a.webp",
+        "crop": {
+          "x": 0.33667,
+          "y": 0.35904,
+          "w": 0.20917,
+          "h": 0.36493
+        },
+        "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69ccb6b4-fc1c-49ff-a0e9-00670ad3022a"
+      },
+      {
+        "id": "69ccb6b5-66c0-4851-b4fb-48090ad301d1",
+        "name": "Prosop Maxi de bucătărie",
+        "price": 9.49,
+        "oldPrice": 13.69,
+        "discount": "-30%",
+        "page": 1,
+        "imagePath": "/catalogs/de-luni-06-04-pana-sambata-11-04-2026-04-06/crops/69ccb6b5-66c0-4851-b4fb-48090ad301d1.webp",
+        "crop": {
+          "x": 0.00667,
+          "y": 0.47102,
+          "w": 0.32417,
+          "h": 0.25147
+        },
+        "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69ccb6b5-66c0-4851-b4fb-48090ad301d1"
+      },
+      {
+        "id": "69ccb6b6-bde8-49e0-8dc7-00610ad3016e",
+        "name": "Roșii cocktail cu ciorchine",
+        "price": 9.99,
+        "oldPrice": 0,
+        "discount": "",
+        "page": 1,
+        "imagePath": "/catalogs/de-luni-06-04-pana-sambata-11-04-2026-04-06/crops/69ccb6b6-bde8-49e0-8dc7-00610ad3016e.webp",
+        "crop": {
+          "x": 0.33167,
+          "y": 0.73379,
+          "w": 0.32833,
+          "h": 0.21857
+        },
+        "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69ccb6b6-bde8-49e0-8dc7-00610ad3016e"
+      },
+      {
+        "id": "69ccb6b7-d970-4c2e-ba36-48350ad302f8",
+        "name": "Aparat spumare lapte",
+        "price": 99.99,
+        "oldPrice": 0,
+        "discount": "",
+        "page": 1,
+        "imagePath": "/catalogs/de-luni-06-04-pana-sambata-11-04-2026-04-06/crops/69ccb6b7-d970-4c2e-ba36-48350ad302f8.webp",
+        "crop": {
+          "x": 0.00417,
+          "y": 0.7279,
+          "w": 0.32333,
+          "h": 0.22544
+        },
+        "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69ccb6b7-d970-4c2e-ba36-48350ad302f8"
+      },
+      {
+        "id": "69ccb6b7-ec78-4eda-85eb-00e50ad3002a",
+        "name": "Tiramisu cu pișcoturi",
+        "price": 17.99,
+        "oldPrice": 0,
+        "discount": "",
+        "page": 1,
+        "imagePath": "/catalogs/de-luni-06-04-pana-sambata-11-04-2026-04-06/crops/69ccb6b7-ec78-4eda-85eb-00e50ad3002a.webp",
+        "crop": {
+          "x": 0.66333,
+          "y": 0.73183,
+          "w": 0.3275,
+          "h": 0.22053
+        },
+        "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69ccb6b7-ec78-4eda-85eb-00e50ad3002a"
+      },
+      {
+        "id": "69ccb6b3-2ddc-4195-9cea-29bc0ad302f8",
+        "name": "Kashkaval Cheese",
+        "price": 23.99,
+        "oldPrice": 31.99,
+        "discount": "-20%",
+        "page": 2,
+        "imagePath": "/catalogs/de-luni-06-04-pana-sambata-11-04-2026-04-06/crops/69ccb6b3-2ddc-4195-9cea-29bc0ad302f8.webp",
+        "crop": {
+          "x": 0.04167,
+          "y": 0.55157,
+          "w": 0.9275,
+          "h": 0.39587
+        },
+        "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69ccb6b3-2ddc-4195-9cea-29bc0ad302f8"
+      },
+      {
+        "id": "69ccb6b4-80bc-4344-87d5-26070ad300c5",
+        "name": "Almonds",
+        "price": 7.49,
+        "oldPrice": 10.19,
+        "discount": "-26%",
+        "page": 2,
+        "imagePath": "/catalogs/de-luni-06-04-pana-sambata-11-04-2026-04-06/crops/69ccb6b4-80bc-4344-87d5-26070ad300c5.webp",
+        "crop": {
+          "x": 0.04,
+          "y": 0.0609,
+          "w": 0.92,
+          "h": 0.40864
+        },
+        "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69ccb6b4-80bc-4344-87d5-26070ad300c5"
+      },
+      {
+        "id": "69ccb6b5-0eb4-4d9b-b410-faa50ad30242",
+        "name": "Lapte",
+        "price": 4.39,
+        "oldPrice": 5.55,
+        "discount": "-20%",
+        "page": 3,
+        "imagePath": "/catalogs/de-luni-06-04-pana-sambata-11-04-2026-04-06/crops/69ccb6b5-0eb4-4d9b-b410-faa50ad30242.webp",
+        "crop": {
+          "x": 0.03083,
+          "y": 0.49361,
+          "w": 0.94333,
+          "h": 0.4499
+        },
+        "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69ccb6b5-0eb4-4d9b-b410-faa50ad30242"
+      },
+      {
+        "id": "69ccb6b5-f7a4-4207-be73-4ff30ad302c0",
+        "name": "Smântână",
+        "price": 4.79,
+        "oldPrice": 6.15,
+        "discount": "-22%",
+        "page": 3,
+        "imagePath": "/catalogs/de-luni-06-04-pana-sambata-11-04-2026-04-06/crops/69ccb6b5-f7a4-4207-be73-4ff30ad302c0.webp",
+        "crop": {
+          "x": 0.04667,
+          "y": 0.07122,
+          "w": 0.92,
+          "h": 0.40177
+        },
+        "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69ccb6b5-f7a4-4207-be73-4ff30ad302c0"
+      },
+      {
+        "id": "69ccb6b6-09d4-4285-bd61-33980ad3014f",
+        "name": "Ceapă verde",
+        "price": 1.49,
+        "oldPrice": 1.99,
+        "discount": "-25%",
+        "page": 4,
+        "imagePath": "/catalogs/de-luni-06-04-pana-sambata-11-04-2026-04-06/crops/69ccb6b6-09d4-4285-bd61-33980ad3014f.webp",
+        "crop": {
+          "x": 0.00583,
+          "y": 0.16208,
+          "w": 0.99083,
+          "h": 0.35609
+        },
+        "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69ccb6b6-09d4-4285-bd61-33980ad3014f"
+      },
+      {
+        "id": "69ccb6b7-1d58-44ab-8ecc-2c8b0ad300c5",
+        "name": "Fructul pasiunii / Maracuja",
+        "price": 10.99,
+        "oldPrice": 0,
+        "discount": "",
+        "page": 4,
+        "imagePath": "/catalogs/de-luni-06-04-pana-sambata-11-04-2026-04-06/crops/69ccb6b7-1d58-44ab-8ecc-2c8b0ad300c5.webp",
+        "crop": {
+          "x": 0.51167,
+          "y": 0.59037,
+          "w": 0.48333,
+          "h": 0.36198
+        },
+        "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69ccb6b7-1d58-44ab-8ecc-2c8b0ad300c5"
+      },
+      {
+        "id": "69ccb6b7-fda8-4a09-aa3a-0be80ad302be",
+        "name": "Mere Pink Lady",
+        "price": 10.99,
+        "oldPrice": 0,
+        "discount": "",
+        "page": 4,
+        "imagePath": "/catalogs/de-luni-06-04-pana-sambata-11-04-2026-04-06/crops/69ccb6b7-fda8-4a09-aa3a-0be80ad302be.webp",
+        "crop": {
+          "x": 0.00833,
+          "y": 0.59725,
+          "w": 0.49083,
+          "h": 0.35265
+        },
+        "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69ccb6b7-fda8-4a09-aa3a-0be80ad302be"
+      },
+      {
+        "id": "69ccb6b7-bdf0-4658-adf4-00ca0ad301b2",
+        "name": "Salată mixtă mediteraneană",
+        "price": 4.49,
+        "oldPrice": 5.99,
+        "discount": "-25%",
+        "page": 5,
+        "imagePath": "/catalogs/de-luni-06-04-pana-sambata-11-04-2026-04-06/crops/69ccb6b7-bdf0-4658-adf4-00ca0ad301b2.webp",
+        "crop": {
+          "x": 0.00833,
+          "y": 0.16454,
+          "w": 0.46083,
+          "h": 0.34136
+        },
+        "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69ccb6b7-bdf0-4658-adf4-00ca0ad301b2"
+      },
+      {
+        "id": "69ccb6b8-f544-4029-9236-d0090ad302bc",
+        "name": "Căpsuni",
+        "price": 8.99,
+        "oldPrice": 12.99,
+        "discount": "-30%",
+        "page": 5,
+        "imagePath": "/catalogs/de-luni-06-04-pana-sambata-11-04-2026-04-06/crops/69ccb6b8-f544-4029-9236-d0090ad302bc.webp",
+        "crop": {
+          "x": 0.045,
+          "y": 0.55992,
+          "w": 0.58583,
+          "h": 0.39096
+        },
+        "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69ccb6b8-f544-4029-9236-d0090ad302bc"
+      },
+      {
+        "id": "69ccb6b9-aee0-4e92-8d2d-4bf30ad30208",
+        "name": "Pătrunjel rădăcină",
+        "price": 3.99,
+        "oldPrice": 6.49,
+        "discount": "-38%",
+        "page": 5,
+        "imagePath": "/catalogs/de-luni-06-04-pana-sambata-11-04-2026-04-06/crops/69ccb6b9-aee0-4e92-8d2d-4bf30ad30208.webp",
+        "crop": {
+          "x": 0.49167,
+          "y": 0.16503,
+          "w": 0.50167,
+          "h": 0.33792
+        },
+        "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69ccb6b9-aee0-4e92-8d2d-4bf30ad30208"
+      },
+      {
+        "id": "69ccb6b9-a198-4a1c-b81d-00aa0ad3001d",
+        "name": "Pulpe de pui superioare, dezosate, fără piele",
+        "price": 12.89,
+        "oldPrice": 15.85,
+        "discount": "-18%",
+        "page": 6,
+        "imagePath": "/catalogs/de-luni-06-04-pana-sambata-11-04-2026-04-06/crops/69ccb6b9-a198-4a1c-b81d-00aa0ad3001d.webp",
+        "crop": {
+          "x": 0.375,
+          "y": 0.49804,
+          "w": 0.58667,
+          "h": 0.22446
+        },
+        "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69ccb6b9-a198-4a1c-b81d-00aa0ad3001d"
+      },
+      {
+        "id": "69ccb6ba-ef48-479a-850a-0fb50ad30244",
+        "name": "Cârnați groși de porc",
+        "price": 19.99,
+        "oldPrice": 24.99,
+        "discount": "-20%",
+        "page": 6,
+        "imagePath": "/catalogs/de-luni-06-04-pana-sambata-11-04-2026-04-06/crops/69ccb6ba-ef48-479a-850a-0fb50ad30244.webp",
+        "crop": {
+          "x": 0.00667,
+          "y": 0.72839,
+          "w": 0.32333,
+          "h": 0.22642
+        },
+        "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69ccb6ba-ef48-479a-850a-0fb50ad30244"
+      },
+      {
+        "id": "69ccb6ba-f44c-45b4-a681-00750ad3002a",
+        "name": "Piept de pui dezosat",
+        "price": 2.99,
+        "oldPrice": 0,
+        "discount": "",
+        "page": 6,
+        "imagePath": "/catalogs/de-luni-06-04-pana-sambata-11-04-2026-04-06/crops/69ccb6ba-f44c-45b4-a681-00750ad3002a.webp",
+        "crop": {
+          "x": 0.33583,
+          "y": 0.72888,
+          "w": 0.32167,
+          "h": 0.22495
+        },
+        "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69ccb6ba-f44c-45b4-a681-00750ad3002a"
+      },
+      {
+        "id": "69ccb6bb-09d0-4559-bd63-4a870ad301f9",
+        "name": "Steak de vită Black Angus",
+        "price": 34.99,
+        "oldPrice": 0,
+        "discount": "Stoc limitat",
+        "page": 6,
+        "imagePath": "/catalogs/de-luni-06-04-pana-sambata-11-04-2026-04-06/crops/69ccb6bb-09d0-4559-bd63-4a870ad301f9.webp",
+        "crop": {
+          "x": 0.65917,
+          "y": 0.72937,
+          "w": 0.33167,
+          "h": 0.22544
+        },
+        "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69ccb6bb-09d0-4559-bd63-4a870ad301f9"
+      },
+      {
+        "id": "69ccb6bc-254c-403d-9d66-d62b0ad301f9",
+        "name": "Carne tocată de porc",
+        "price": 10.99,
+        "oldPrice": 13.19,
+        "discount": "-16%",
+        "page": 6,
+        "imagePath": "/catalogs/de-luni-06-04-pana-sambata-11-04-2026-04-06/crops/69ccb6bc-254c-403d-9d66-d62b0ad301f9.webp",
+        "crop": {
+          "x": 0.00833,
+          "y": 0.48969,
+          "w": 0.35417,
+          "h": 0.23281
+        },
+        "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69ccb6bc-254c-403d-9d66-d62b0ad301f9"
+      },
+      {
+        "id": "69ccb6bc-aec8-4879-b83b-f8af0ad300a2",
+        "name": "Briochă carrot cake",
+        "price": 6.99,
+        "oldPrice": 0,
+        "discount": "",
+        "page": 7,
+        "imagePath": "/catalogs/de-luni-06-04-pana-sambata-11-04-2026-04-06/crops/69ccb6bc-aec8-4879-b83b-f8af0ad300a2.webp",
+        "crop": {
+          "x": 0.5375,
+          "y": 0.49951,
+          "w": 0.44583,
+          "h": 0.40815
+        },
+        "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69ccb6bc-aec8-4879-b83b-f8af0ad300a2"
+      },
+      {
+        "id": "69ccb6bd-afe8-469a-abc3-f2600ad30242",
+        "name": "Mini focaccia",
+        "price": 1.49,
+        "oldPrice": 0,
+        "discount": "",
+        "page": 7,
+        "imagePath": "/catalogs/de-luni-06-04-pana-sambata-11-04-2026-04-06/crops/69ccb6bd-afe8-469a-abc3-f2600ad30242.webp",
+        "crop": {
+          "x": 0.0075,
+          "y": 0.63458,
+          "w": 0.52083,
+          "h": 0.27112
+        },
+        "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69ccb6bd-afe8-469a-abc3-f2600ad30242"
+      },
+      {
+        "id": "69ccb6bd-f0b4-4b9f-9db6-418e0ad30076",
+        "name": "P\ta\tin\te Durum",
+        "price": 5.49,
+        "oldPrice": 7.09,
+        "discount": "-22%",
+        "page": 7,
+        "imagePath": "/catalogs/de-luni-06-04-pana-sambata-11-04-2026-04-06/crops/69ccb6bd-f0b4-4b9f-9db6-418e0ad30076.webp",
+        "crop": {
+          "x": 0.01083,
+          "y": 0.05747,
+          "w": 0.65333,
+          "h": 0.18468
+        },
+        "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69ccb6bd-f0b4-4b9f-9db6-418e0ad30076"
+      },
+      {
+        "id": "69ccb6be-74ac-4b1f-bec8-3e9c0ad30208",
+        "name": "Trigon cu mere",
+        "price": 1.69,
+        "oldPrice": 2.19,
+        "discount": "-22%",
+        "page": 7,
+        "imagePath": "/catalogs/de-luni-06-04-pana-sambata-11-04-2026-04-06/crops/69ccb6be-74ac-4b1f-bec8-3e9c0ad30208.webp",
+        "crop": {
+          "x": 0.66417,
+          "y": 0.05501,
+          "w": 0.32667,
+          "h": 0.18664
+        },
+        "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69ccb6be-74ac-4b1f-bec8-3e9c0ad30208"
+      },
+      {
+        "id": "69ccb6bf-cbd8-44fe-ba1a-3a400ad300f1",
+        "name": "Milka - Gogoși cu umplutură",
+        "price": 7.29,
+        "oldPrice": 9.15,
+        "discount": "-20%",
+        "page": 7,
+        "imagePath": "/catalogs/de-luni-06-04-pana-sambata-11-04-2026-04-06/crops/69ccb6bf-cbd8-44fe-ba1a-3a400ad300f1.webp",
+        "crop": {
+          "x": 0.0025,
+          "y": 0.25835,
+          "w": 0.33,
+          "h": 0.2279
+        },
+        "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69ccb6bf-cbd8-44fe-ba1a-3a400ad300f1"
+      },
+      {
+        "id": "69ccb6c0-27b4-4438-8ab1-4c640ad30076",
+        "name": "Tartă cu vișine",
+        "price": 17.99,
+        "oldPrice": 0,
+        "discount": "",
+        "page": 7,
+        "imagePath": "/catalogs/de-luni-06-04-pana-sambata-11-04-2026-04-06/crops/69ccb6c0-27b4-4438-8ab1-4c640ad30076.webp",
+        "crop": {
+          "x": 0.33667,
+          "y": 0.25196,
+          "w": 0.31583,
+          "h": 0.23428
+        },
+        "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69ccb6c0-27b4-4438-8ab1-4c640ad30076"
+      },
+      {
+        "id": "69ccb6c1-e048-4a54-aca2-443d0ad30111",
+        "name": "Pasca cu brânză",
+        "price": 16.99,
+        "oldPrice": 0,
+        "discount": "",
+        "page": 7,
+        "imagePath": "/catalogs/de-luni-06-04-pana-sambata-11-04-2026-04-06/crops/69ccb6c1-e048-4a54-aca2-443d0ad30111.webp",
+        "crop": {
+          "x": 0.65667,
+          "y": 0.24705,
+          "w": 0.33583,
+          "h": 0.24067
+        },
+        "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69ccb6c1-e048-4a54-aca2-443d0ad30111"
+      },
+      {
+        "id": "69ccb6bd-158c-4d70-ad5f-41600ad30076",
+        "name": "cupon de 50 lei",
+        "price": 50,
+        "oldPrice": 0,
+        "discount": "",
+        "page": 9,
+        "imagePath": "/catalogs/de-luni-06-04-pana-sambata-11-04-2026-04-06/crops/69ccb6bd-158c-4d70-ad5f-41600ad30076.webp",
+        "crop": {
+          "x": 0.02,
+          "y": 0.00688,
+          "w": 0.97167,
+          "h": 0.92583
+        },
+        "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69ccb6bd-158c-4d70-ad5f-41600ad30076"
+      },
+      {
+        "id": "69ccb6c0-6360-4d03-bb27-00770ad30241",
+        "name": "Selecție de pateuri",
+        "price": 14.99,
+        "oldPrice": 0,
+        "discount": "",
+        "page": 10,
+        "imagePath": "/catalogs/de-luni-06-04-pana-sambata-11-04-2026-04-06/crops/69ccb6c0-6360-4d03-bb27-00770ad30241.webp",
+        "crop": {
+          "x": 0.45167,
+          "y": 0.28438,
+          "w": 0.53167,
+          "h": 0.20383
+        },
+        "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69ccb6c0-6360-4d03-bb27-00770ad30241"
+      },
+      {
+        "id": "69ccb6c1-5bf8-4dcb-8aab-39510ad300f1",
+        "name": "Specialitate salam crud-uscat",
+        "price": 17.99,
+        "oldPrice": 0,
+        "discount": "",
+        "page": 10,
+        "imagePath": "/catalogs/de-luni-06-04-pana-sambata-11-04-2026-04-06/crops/69ccb6c1-5bf8-4dcb-8aab-39510ad300f1.webp",
+        "crop": {
+          "x": 0.0075,
+          "y": 0.73527,
+          "w": 0.32583,
+          "h": 0.22004
+        },
+        "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69ccb6c1-5bf8-4dcb-8aab-39510ad300f1"
+      },
+      {
+        "id": "69ccb6c2-7034-42ce-910c-2de50ad300c5",
+        "name": "Selecție salamuri feliate",
+        "price": 14.99,
+        "oldPrice": 0,
+        "discount": "",
+        "page": 10,
+        "imagePath": "/catalogs/de-luni-06-04-pana-sambata-11-04-2026-04-06/crops/69ccb6c2-7034-42ce-910c-2de50ad300c5.webp",
+        "crop": {
+          "x": 0.00667,
+          "y": 0.51228,
+          "w": 0.32667,
+          "h": 0.21562
+        },
+        "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69ccb6c2-7034-42ce-910c-2de50ad300c5"
+      },
+      {
+        "id": "69ccb6c2-f94c-407c-9165-492c0ad301d1",
+        "name": "Jamón Serrano Gran Reserva",
+        "price": 11.99,
+        "oldPrice": 0,
+        "discount": "",
+        "page": 10,
+        "imagePath": "/catalogs/de-luni-06-04-pana-sambata-11-04-2026-04-06/crops/69ccb6c2-f94c-407c-9165-492c0ad301d1.webp",
+        "crop": {
+          "x": 0.33667,
+          "y": 0.73134,
+          "w": 0.31583,
+          "h": 0.22348
+        },
+        "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69ccb6c2-f94c-407c-9165-492c0ad301d1"
+      },
+      {
+        "id": "69ccb6c3-8380-4e58-bd30-00a40ad3002a",
+        "name": "Selecție de brânzeturi franțuzești",
+        "price": 39.99,
+        "oldPrice": 0,
+        "discount": "",
+        "page": 10,
+        "imagePath": "/catalogs/de-luni-06-04-pana-sambata-11-04-2026-04-06/crops/69ccb6c3-8380-4e58-bd30-00a40ad3002a.webp",
+        "crop": {
+          "x": 0.3375,
+          "y": 0.49754,
+          "w": 0.32333,
+          "h": 0.22888
+        },
+        "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69ccb6c3-8380-4e58-bd30-00a40ad3002a"
+      },
+      {
+        "id": "69ccb6c4-d11c-49c9-9961-33d70ad301f9",
+        "name": "Antipasti Plate Greek Style",
+        "price": 36.99,
+        "oldPrice": 0,
+        "discount": "",
+        "page": 10,
+        "imagePath": "/catalogs/de-luni-06-04-pana-sambata-11-04-2026-04-06/crops/69ccb6c4-d11c-49c9-9961-33d70ad301f9.webp",
+        "crop": {
+          "x": 0.65917,
+          "y": 0.72741,
+          "w": 0.33167,
+          "h": 0.2279
+        },
+        "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69ccb6c4-d11c-49c9-9961-33d70ad301f9"
+      },
+      {
+        "id": "69ccb6c5-4058-4ab2-af69-46a40ad301e6",
+        "name": "Burrata",
+        "price": 8.99,
+        "oldPrice": 11.99,
+        "discount": "-25%",
+        "page": 10,
+        "imagePath": "/catalogs/de-luni-06-04-pana-sambata-11-04-2026-04-06/crops/69ccb6c5-4058-4ab2-af69-46a40ad301e6.webp",
+        "crop": {
+          "x": 0.66667,
+          "y": 0.49558,
+          "w": 0.32167,
+          "h": 0.22839
+        },
+        "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69ccb6c5-4058-4ab2-af69-46a40ad301e6"
+      }
+    ],
+    "isActive": true,
+    "scrapedAt": "2026-04-10T11:29:45.102Z"
+  },
+  {
+    "slug": "silvercrest-2026-03-30",
+    "sourceId": "52562",
+    "publicationId": "51589",
+    "title": "Silvercrest",
+    "description": "Catalog Lidl valabil 2026-03-30 — 2026-05-10",
+    "startDate": "2026-03-30",
+    "endDate": "2026-05-10",
+    "coverImage": "/catalogs/silvercrest-2026-03-30/pages/page_01.webp",
+    "pages": [
+      {
+        "pageNumber": 1,
+        "imagePath": "/catalogs/silvercrest-2026-03-30/pages/page_01.webp",
+        "width": 1200,
+        "height": 2036
+      },
+      {
+        "pageNumber": 2,
+        "imagePath": "/catalogs/silvercrest-2026-03-30/pages/page_02.webp",
+        "width": 1200,
+        "height": 2036
+      },
+      {
+        "pageNumber": 3,
+        "imagePath": "/catalogs/silvercrest-2026-03-30/pages/page_03.webp",
+        "width": 1200,
+        "height": 2036
+      },
+      {
+        "pageNumber": 4,
+        "imagePath": "/catalogs/silvercrest-2026-03-30/pages/page_04.webp",
+        "width": 1200,
+        "height": 2036
+      },
+      {
+        "pageNumber": 5,
+        "imagePath": "/catalogs/silvercrest-2026-03-30/pages/page_05.webp",
+        "width": 1200,
+        "height": 2036
+      },
+      {
+        "pageNumber": 6,
+        "imagePath": "/catalogs/silvercrest-2026-03-30/pages/page_06.webp",
+        "width": 1200,
+        "height": 2036
+      },
+      {
+        "pageNumber": 7,
+        "imagePath": "/catalogs/silvercrest-2026-03-30/pages/page_07.webp",
+        "width": 1200,
+        "height": 2036
+      },
+      {
+        "pageNumber": 8,
+        "imagePath": "/catalogs/silvercrest-2026-03-30/pages/page_08.webp",
+        "width": 1200,
+        "height": 2036
+      },
+      {
+        "pageNumber": 9,
+        "imagePath": "/catalogs/silvercrest-2026-03-30/pages/page_09.webp",
+        "width": 1200,
+        "height": 2036
+      },
+      {
+        "pageNumber": 10,
+        "imagePath": "/catalogs/silvercrest-2026-03-30/pages/page_10.webp",
+        "width": 1200,
+        "height": 2036
+      }
+    ],
+    "hotspots": {
+      "4": [
+        {
+          "id": "69c6242f-8a38-4cd5-99fb-42dd0ad302aa",
+          "page": 4,
+          "crop": {
+            "x": 0.02083,
+            "y": 0.35953,
+            "w": 0.95667,
+            "h": 0.43615
+          },
+          "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69c6242f-8a38-4cd5-99fb-42dd0ad302aa"
+        }
+      ],
+      "5": [
+        {
+          "id": "69c62466-4998-4654-b351-002b0ad30235",
+          "page": 5,
+          "crop": {
+            "x": 0.48,
+            "y": 0.67043,
+            "w": 0.50667,
+            "h": 0.31532
+          },
+          "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69c62466-4998-4654-b351-002b0ad30235"
+        },
+        {
+          "id": "69c62467-6f6c-4cc1-aa78-00e90ad3023e",
+          "page": 5,
+          "crop": {
+            "x": 0.00583,
+            "y": 0.67583,
+            "w": 0.45,
+            "h": 0.31238
+          },
+          "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69c62467-6f6c-4cc1-aa78-00e90ad3023e"
+        }
+      ],
+      "6": [
+        {
+          "id": "69c62467-eb34-4ee8-a06b-00420ad300c7",
+          "page": 6,
+          "crop": {
+            "x": 0.03333,
+            "y": 0.64538,
+            "w": 0.8525,
+            "h": 0.31729
+          },
+          "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69c62467-eb34-4ee8-a06b-00420ad300c7"
+        },
+        {
+          "id": "69c62468-641c-4960-866b-00d30ad3019d",
+          "page": 6,
+          "crop": {
+            "x": 0.01833,
+            "y": 0.44155,
+            "w": 0.55333,
+            "h": 0.19695
+          },
+          "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69c62468-641c-4960-866b-00d30ad3019d"
+        }
+      ],
+      "8": [
+        {
+          "id": "69c62469-dfa8-4c17-b3e9-00bb0ad300d3",
+          "page": 8,
+          "crop": {
+            "x": 0.01833,
+            "y": 0.82564,
+            "w": 0.64917,
+            "h": 0.14882
+          },
+          "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69c62469-dfa8-4c17-b3e9-00bb0ad300d3"
+        },
+        {
+          "id": "69c6246a-04c4-48a5-86a6-4bd50ad3023e",
+          "page": 8,
+          "crop": {
+            "x": 0.0125,
+            "y": 0.66257,
+            "w": 0.58417,
+            "h": 0.15373
+          },
+          "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69c6246a-04c4-48a5-86a6-4bd50ad3023e"
+        },
+        {
+          "id": "69c6246a-0c5c-4a8e-bafa-3f550ad302c5",
+          "page": 8,
+          "crop": {
+            "x": 0.67,
+            "y": 0.66699,
+            "w": 0.31333,
+            "h": 0.31729
+          },
+          "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69c6246a-0c5c-4a8e-bafa-3f550ad302c5"
+        }
+      ],
+      "9": [
+        {
+          "id": "69c62469-1dc4-46c8-ac7a-002b0ad301da",
+          "page": 9,
+          "crop": {
+            "x": 0.10167,
+            "y": 0.73772,
+            "w": 0.78417,
+            "h": 0.25
+          },
+          "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69c62469-1dc4-46c8-ac7a-002b0ad301da"
+        }
+      ],
+      "10": [
+        {
+          "id": "69c6246a-c388-472b-8d0f-00870ad301da",
+          "page": 10,
+          "crop": {
+            "x": 0.04083,
+            "y": 0.77554,
+            "w": 0.89167,
+            "h": 0.19499
+          },
+          "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69c6246a-c388-472b-8d0f-00870ad301da"
+        }
+      ]
+    },
+    "products": [
+      {
+        "id": "69c6242f-8a38-4cd5-99fb-42dd0ad302aa",
+        "name": "Robot de bucătărie",
+        "price": 279,
+        "oldPrice": 0,
+        "discount": "",
+        "page": 4,
+        "imagePath": "/catalogs/silvercrest-2026-03-30/crops/69c6242f-8a38-4cd5-99fb-42dd0ad302aa.webp",
+        "crop": {
+          "x": 0.02083,
+          "y": 0.35953,
+          "w": 0.95667,
+          "h": 0.43615
+        },
+        "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69c6242f-8a38-4cd5-99fb-42dd0ad302aa"
+      },
+      {
+        "id": "69c62466-4998-4654-b351-002b0ad30235",
+        "name": "Aparat de vidat",
+        "price": 59.99,
+        "oldPrice": 0,
+        "discount": "",
+        "page": 5,
+        "imagePath": "/catalogs/silvercrest-2026-03-30/crops/69c62466-4998-4654-b351-002b0ad30235.webp",
+        "crop": {
+          "x": 0.48,
+          "y": 0.67043,
+          "w": 0.50667,
+          "h": 0.31532
+        },
+        "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69c62466-4998-4654-b351-002b0ad30235"
+      },
+      {
+        "id": "69c62467-6f6c-4cc1-aa78-00e90ad3023e",
+        "name": "Role folii pentru vidat",
+        "price": 16.99,
+        "oldPrice": 0,
+        "discount": "",
+        "page": 5,
+        "imagePath": "/catalogs/silvercrest-2026-03-30/crops/69c62467-6f6c-4cc1-aa78-00e90ad3023e.webp",
+        "crop": {
+          "x": 0.00583,
+          "y": 0.67583,
+          "w": 0.45,
+          "h": 0.31238
+        },
+        "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69c62467-6f6c-4cc1-aa78-00e90ad3023e"
+      },
+      {
+        "id": "69c62467-eb34-4ee8-a06b-00420ad300c7",
+        "name": "Vertical - Mixer vertical",
+        "price": 99.99,
+        "oldPrice": 0,
+        "discount": "",
+        "page": 6,
+        "imagePath": "/catalogs/silvercrest-2026-03-30/crops/69c62467-eb34-4ee8-a06b-00420ad300c7.webp",
+        "crop": {
+          "x": 0.03333,
+          "y": 0.64538,
+          "w": 0.8525,
+          "h": 0.31729
+        },
+        "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69c62467-eb34-4ee8-a06b-00420ad300c7"
+      },
+      {
+        "id": "69c62468-641c-4960-866b-00d30ad3019d",
+        "name": "Blender",
+        "price": 179,
+        "oldPrice": 0,
+        "discount": "",
+        "page": 6,
+        "imagePath": "/catalogs/silvercrest-2026-03-30/crops/69c62468-641c-4960-866b-00d30ad3019d.webp",
+        "crop": {
+          "x": 0.01833,
+          "y": 0.44155,
+          "w": 0.55333,
+          "h": 0.19695
+        },
+        "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69c62468-641c-4960-866b-00d30ad3019d"
+      },
+      {
+        "id": "69c62469-dfa8-4c17-b3e9-00bb0ad300d3",
+        "name": "Oale din inox cu capac din sticlă",
+        "price": 199,
+        "oldPrice": 0,
+        "discount": "",
+        "page": 8,
+        "imagePath": "/catalogs/silvercrest-2026-03-30/crops/69c62469-dfa8-4c17-b3e9-00bb0ad300d3.webp",
+        "crop": {
+          "x": 0.01833,
+          "y": 0.82564,
+          "w": 0.64917,
+          "h": 0.14882
+        },
+        "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69c62469-dfa8-4c17-b3e9-00bb0ad300d3"
+      },
+      {
+        "id": "69c6246a-04c4-48a5-86a6-4bd50ad3023e",
+        "name": "Oală sub presiune",
+        "price": 219,
+        "oldPrice": 0,
+        "discount": "",
+        "page": 8,
+        "imagePath": "/catalogs/silvercrest-2026-03-30/crops/69c6246a-04c4-48a5-86a6-4bd50ad3023e.webp",
+        "crop": {
+          "x": 0.0125,
+          "y": 0.66257,
+          "w": 0.58417,
+          "h": 0.15373
+        },
+        "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69c6246a-04c4-48a5-86a6-4bd50ad3023e"
+      },
+      {
+        "id": "69c6246a-0c5c-4a8e-bafa-3f550ad302c5",
+        "name": "Tigaie din inox",
+        "price": 79.99,
+        "oldPrice": 0,
+        "discount": "",
+        "page": 8,
+        "imagePath": "/catalogs/silvercrest-2026-03-30/crops/69c6246a-0c5c-4a8e-bafa-3f550ad302c5.webp",
+        "crop": {
+          "x": 0.67,
+          "y": 0.66699,
+          "w": 0.31333,
+          "h": 0.31729
+        },
+        "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69c6246a-0c5c-4a8e-bafa-3f550ad302c5"
+      },
+      {
+        "id": "69c62469-1dc4-46c8-ac7a-002b0ad301da",
+        "name": "Măruntitor",
+        "price": 79.99,
+        "oldPrice": 0,
+        "discount": "",
+        "page": 9,
+        "imagePath": "/catalogs/silvercrest-2026-03-30/crops/69c62469-1dc4-46c8-ac7a-002b0ad301da.webp",
+        "crop": {
+          "x": 0.10167,
+          "y": 0.73772,
+          "w": 0.78417,
+          "h": 0.25
+        },
+        "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69c62469-1dc4-46c8-ac7a-002b0ad301da"
+      },
+      {
+        "id": "69c6246a-c388-472b-8d0f-00870ad301da",
+        "name": "Robot multifuncțional de bucătărie",
+        "price": 2199,
+        "oldPrice": 0,
+        "discount": "",
+        "page": 10,
+        "imagePath": "/catalogs/silvercrest-2026-03-30/crops/69c6246a-c388-472b-8d0f-00870ad301da.webp",
+        "crop": {
+          "x": 0.04083,
+          "y": 0.77554,
+          "w": 0.89167,
+          "h": 0.19499
+        },
+        "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69c6246a-c388-472b-8d0f-00870ad301da"
+      }
+    ],
+    "isActive": true,
+    "scrapedAt": "2026-04-10T11:29:45.419Z"
+  },
+  {
+    "slug": "de-vinuri-2026-02-23",
+    "sourceId": "53526",
+    "publicationId": "52527",
+    "title": "de vinuri",
+    "description": "Catalog Lidl valabil 2026-02-23 — 2026-04-30",
+    "startDate": "2026-02-23",
+    "endDate": "2026-04-30",
+    "coverImage": "/catalogs/de-vinuri-2026-02-23/pages/page_01.webp",
+    "pages": [
+      {
+        "pageNumber": 1,
+        "imagePath": "/catalogs/de-vinuri-2026-02-23/pages/page_01.webp",
+        "width": 1200,
+        "height": 1913
+      },
+      {
+        "pageNumber": 2,
+        "imagePath": "/catalogs/de-vinuri-2026-02-23/pages/page_02.webp",
+        "width": 1200,
+        "height": 1913
+      },
+      {
+        "pageNumber": 3,
+        "imagePath": "/catalogs/de-vinuri-2026-02-23/pages/page_03.webp",
+        "width": 1200,
+        "height": 1913
+      },
+      {
+        "pageNumber": 4,
+        "imagePath": "/catalogs/de-vinuri-2026-02-23/pages/page_04.webp",
+        "width": 1200,
+        "height": 1913
+      },
+      {
+        "pageNumber": 5,
+        "imagePath": "/catalogs/de-vinuri-2026-02-23/pages/page_05.webp",
+        "width": 1200,
+        "height": 1913
+      },
+      {
+        "pageNumber": 6,
+        "imagePath": "/catalogs/de-vinuri-2026-02-23/pages/page_06.webp",
+        "width": 1200,
+        "height": 1913
+      },
+      {
+        "pageNumber": 7,
+        "imagePath": "/catalogs/de-vinuri-2026-02-23/pages/page_07.webp",
+        "width": 1200,
+        "height": 1913
+      },
+      {
+        "pageNumber": 8,
+        "imagePath": "/catalogs/de-vinuri-2026-02-23/pages/page_08.webp",
+        "width": 1200,
+        "height": 1913
+      },
+      {
+        "pageNumber": 9,
+        "imagePath": "/catalogs/de-vinuri-2026-02-23/pages/page_09.webp",
+        "width": 1200,
+        "height": 1913
+      },
+      {
+        "pageNumber": 10,
+        "imagePath": "/catalogs/de-vinuri-2026-02-23/pages/page_10.webp",
+        "width": 1200,
+        "height": 1913
+      }
+    ],
+    "hotspots": {
+      "5": [
+        {
+          "id": "69cf5773-2ac0-4fba-bcf3-26780ad30130",
+          "page": 5,
+          "crop": {
+            "x": 0.525,
+            "y": 0.03502,
+            "w": 0.355,
+            "h": 0.92734
+          },
+          "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69cf5773-2ac0-4fba-bcf3-26780ad30130"
+        },
+        {
+          "id": "69cf5773-ff04-41cc-b313-269b0ad3010c",
+          "page": 5,
+          "crop": {
+            "x": 0.08,
+            "y": 0.03136,
+            "w": 0.44083,
+            "h": 0.91793
+          },
+          "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69cf5773-ff04-41cc-b313-269b0ad3010c"
+        }
+      ],
+      "6": [
+        {
+          "id": "69cf5774-6624-4c7e-b54b-55660ad3016b",
+          "page": 6,
+          "crop": {
+            "x": 0.015,
+            "y": 0.35233,
+            "w": 0.45417,
+            "h": 0.59122
+          },
+          "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69cf5774-6624-4c7e-b54b-55660ad3016b"
+        },
+        {
+          "id": "69cf5774-9fc0-44c7-9cff-24ee0ad3029d",
+          "page": 6,
+          "crop": {
+            "x": 0.47667,
+            "y": 0.34762,
+            "w": 0.4975,
+            "h": 0.59749
+          },
+          "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69cf5774-9fc0-44c7-9cff-24ee0ad3029d"
+        }
+      ],
+      "7": [
+        {
+          "id": "69cf5775-941c-4583-93b8-1d0b0ad301c5",
+          "page": 7,
+          "crop": {
+            "x": 0.03917,
+            "y": 0.32933,
+            "w": 0.44417,
+            "h": 0.60638
+          },
+          "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69cf5775-941c-4583-93b8-1d0b0ad301c5"
+        },
+        {
+          "id": "69cf5775-b8f8-4834-a8c0-27d00ad300cd",
+          "page": 7,
+          "crop": {
+            "x": 0.62667,
+            "y": 0.23837,
+            "w": 0.34,
+            "h": 0.68531
+          },
+          "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69cf5775-b8f8-4834-a8c0-27d00ad300cd"
+        }
+      ],
+      "8": [
+        {
+          "id": "69cf5775-0a00-4b6d-b56b-21c30ad300c3",
+          "page": 8,
+          "crop": {
+            "x": 0.60833,
+            "y": 0.17773,
+            "w": 0.365,
+            "h": 0.7287
+          },
+          "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69cf5775-0a00-4b6d-b56b-21c30ad300c3"
+        }
+      ],
+      "9": [
+        {
+          "id": "69cf5777-2880-462c-9fe5-2b1f0ad301b2",
+          "page": 9,
+          "crop": {
+            "x": 0.0125,
+            "y": 0.17094,
+            "w": 0.33417,
+            "h": 0.74177
+          },
+          "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69cf5777-2880-462c-9fe5-2b1f0ad301b2"
+        },
+        {
+          "id": "69cf577f-075c-4783-88db-25af0ad302d4",
+          "page": 9,
+          "crop": {
+            "x": 0.66917,
+            "y": 0.11448,
+            "w": 0.32167,
+            "h": 0.80763
+          },
+          "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69cf577f-075c-4783-88db-25af0ad302d4"
+        },
+        {
+          "id": "69cf577f-6354-4a49-877f-38110ad3007a",
+          "page": 9,
+          "crop": {
+            "x": 0.35167,
+            "y": 0.11291,
+            "w": 0.32167,
+            "h": 0.82122
+          },
+          "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69cf577f-6354-4a49-877f-38110ad3007a"
+        }
+      ],
+      "10": [
+        {
+          "id": "69cf5778-a540-45d1-9d71-1fc60ad3008c",
+          "page": 10,
+          "crop": {
+            "x": 0.63583,
+            "y": 0.06587,
+            "w": 0.3525,
+            "h": 0.89022
+          },
+          "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69cf5778-a540-45d1-9d71-1fc60ad3008c"
+        },
+        {
+          "id": "69cf5779-823c-4f90-8bc9-23fe0ad3007d",
+          "page": 10,
+          "crop": {
+            "x": 0.31917,
+            "y": 0.05175,
+            "w": 0.3175,
+            "h": 0.92107
+          },
+          "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69cf5779-823c-4f90-8bc9-23fe0ad3007d"
+        },
+        {
+          "id": "69cf577a-1278-4f50-8349-24df0ad300fa",
+          "page": 10,
+          "crop": {
+            "x": 0.0075,
+            "y": 0.05959,
+            "w": 0.31833,
+            "h": 0.90434
+          },
+          "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69cf577a-1278-4f50-8349-24df0ad300fa"
+        }
+      ]
+    },
+    "products": [
+      {
+        "id": "69cf5773-2ac0-4fba-bcf3-26780ad30130",
+        "name": "Alb - Feteasca Regala & Feteasca a",
+        "price": 36.5,
+        "oldPrice": 0,
+        "discount": "",
+        "page": 5,
+        "imagePath": "/catalogs/de-vinuri-2026-02-23/crops/69cf5773-2ac0-4fba-bcf3-26780ad30130.webp",
+        "crop": {
+          "x": 0.525,
+          "y": 0.03502,
+          "w": 0.355,
+          "h": 0.92734
+        },
+        "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69cf5773-2ac0-4fba-bcf3-26780ad30130"
+      },
+      {
+        "id": "69cf5773-ff04-41cc-b313-269b0ad3010c",
+        "name": "Alb - 1827 Chardonnay",
+        "price": 35.59,
+        "oldPrice": 0,
+        "discount": "",
+        "page": 5,
+        "imagePath": "/catalogs/de-vinuri-2026-02-23/crops/69cf5773-ff04-41cc-b313-269b0ad3010c.webp",
+        "crop": {
+          "x": 0.08,
+          "y": 0.03136,
+          "w": 0.44083,
+          "h": 0.91793
+        },
+        "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69cf5773-ff04-41cc-b313-269b0ad3010c"
+      },
+      {
+        "id": "69cf5774-6624-4c7e-b54b-55660ad3016b",
+        "name": "Alb - Fetească Regală",
+        "price": 19.99,
+        "oldPrice": 0,
+        "discount": "",
+        "page": 6,
+        "imagePath": "/catalogs/de-vinuri-2026-02-23/crops/69cf5774-6624-4c7e-b54b-55660ad3016b.webp",
+        "crop": {
+          "x": 0.015,
+          "y": 0.35233,
+          "w": 0.45417,
+          "h": 0.59122
+        },
+        "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69cf5774-6624-4c7e-b54b-55660ad3016b"
+      },
+      {
+        "id": "69cf5774-9fc0-44c7-9cff-24ee0ad3029d",
+        "name": "Alb - Tamaioasa Romaneasca",
+        "price": 17.29,
+        "oldPrice": 0,
+        "discount": "",
+        "page": 6,
+        "imagePath": "/catalogs/de-vinuri-2026-02-23/crops/69cf5774-9fc0-44c7-9cff-24ee0ad3029d.webp",
+        "crop": {
+          "x": 0.47667,
+          "y": 0.34762,
+          "w": 0.4975,
+          "h": 0.59749
+        },
+        "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69cf5774-9fc0-44c7-9cff-24ee0ad3029d"
+      },
+      {
+        "id": "69cf5775-941c-4583-93b8-1d0b0ad301c5",
+        "name": "Alb - Fetească Regală",
+        "price": 15.19,
+        "oldPrice": 0,
+        "discount": "",
+        "page": 7,
+        "imagePath": "/catalogs/de-vinuri-2026-02-23/crops/69cf5775-941c-4583-93b8-1d0b0ad301c5.webp",
+        "crop": {
+          "x": 0.03917,
+          "y": 0.32933,
+          "w": 0.44417,
+          "h": 0.60638
+        },
+        "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69cf5775-941c-4583-93b8-1d0b0ad301c5"
+      },
+      {
+        "id": "69cf5775-b8f8-4834-a8c0-27d00ad300cd",
+        "name": "Alb - Sauvignon Blanc",
+        "price": 19,
+        "oldPrice": 0,
+        "discount": "",
+        "page": 7,
+        "imagePath": "/catalogs/de-vinuri-2026-02-23/crops/69cf5775-b8f8-4834-a8c0-27d00ad300cd.webp",
+        "crop": {
+          "x": 0.62667,
+          "y": 0.23837,
+          "w": 0.34,
+          "h": 0.68531
+        },
+        "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69cf5775-b8f8-4834-a8c0-27d00ad300cd"
+      },
+      {
+        "id": "69cf5775-0a00-4b6d-b56b-21c30ad300c3",
+        "name": "Alb - Sauvignon Blanc",
+        "price": 25.49,
+        "oldPrice": 0,
+        "discount": "",
+        "page": 8,
+        "imagePath": "/catalogs/de-vinuri-2026-02-23/crops/69cf5775-0a00-4b6d-b56b-21c30ad300c3.webp",
+        "crop": {
+          "x": 0.60833,
+          "y": 0.17773,
+          "w": 0.365,
+          "h": 0.7287
+        },
+        "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69cf5775-0a00-4b6d-b56b-21c30ad300c3"
+      },
+      {
+        "id": "69cf5777-2880-462c-9fe5-2b1f0ad301b2",
+        "name": "Alb - AVERE\r\nZylberhark de Muy",
+        "price": 15.99,
+        "oldPrice": 0,
+        "discount": "",
+        "page": 9,
+        "imagePath": "/catalogs/de-vinuri-2026-02-23/crops/69cf5777-2880-462c-9fe5-2b1f0ad301b2.webp",
+        "crop": {
+          "x": 0.0125,
+          "y": 0.17094,
+          "w": 0.33417,
+          "h": 0.74177
+        },
+        "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69cf5777-2880-462c-9fe5-2b1f0ad301b2"
+      },
+      {
+        "id": "69cf577f-075c-4783-88db-25af0ad302d4",
+        "name": "Cotnari - Grasă de",
+        "price": 17.29,
+        "oldPrice": 0,
+        "discount": "",
+        "page": 9,
+        "imagePath": "/catalogs/de-vinuri-2026-02-23/crops/69cf577f-075c-4783-88db-25af0ad302d4.webp",
+        "crop": {
+          "x": 0.66917,
+          "y": 0.11448,
+          "w": 0.32167,
+          "h": 0.80763
+        },
+        "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69cf577f-075c-4783-88db-25af0ad302d4"
+      },
+      {
+        "id": "69cf577f-6354-4a49-877f-38110ad3007a",
+        "name": "Alb - Sauvignon Blanc",
+        "price": 18.89,
+        "oldPrice": 0,
+        "discount": "",
+        "page": 9,
+        "imagePath": "/catalogs/de-vinuri-2026-02-23/crops/69cf577f-6354-4a49-877f-38110ad3007a.webp",
+        "crop": {
+          "x": 0.35167,
+          "y": 0.11291,
+          "w": 0.32167,
+          "h": 0.82122
+        },
+        "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69cf577f-6354-4a49-877f-38110ad3007a"
+      },
+      {
+        "id": "69cf5778-a540-45d1-9d71-1fc60ad3008c",
+        "name": "Alb - Castel Monde",
+        "price": 25.89,
+        "oldPrice": 28.99,
+        "discount": "-10%",
+        "page": 10,
+        "imagePath": "/catalogs/de-vinuri-2026-02-23/crops/69cf5778-a540-45d1-9d71-1fc60ad3008c.webp",
+        "crop": {
+          "x": 0.63583,
+          "y": 0.06587,
+          "w": 0.3525,
+          "h": 0.89022
+        },
+        "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69cf5778-a540-45d1-9d71-1fc60ad3008c"
+      },
+      {
+        "id": "69cf5779-823c-4f90-8bc9-23fe0ad3007d",
+        "name": "Alb - Tandem",
+        "price": 29,
+        "oldPrice": 33.49,
+        "discount": "-13%",
+        "page": 10,
+        "imagePath": "/catalogs/de-vinuri-2026-02-23/crops/69cf5779-823c-4f90-8bc9-23fe0ad3007d.webp",
+        "crop": {
+          "x": 0.31917,
+          "y": 0.05175,
+          "w": 0.3175,
+          "h": 0.92107
+        },
+        "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69cf5779-823c-4f90-8bc9-23fe0ad3007d"
+      },
+      {
+        "id": "69cf577a-1278-4f50-8349-24df0ad300fa",
+        "name": "Alb - Mysterium",
+        "price": 62.99,
+        "oldPrice": 0,
+        "discount": "",
+        "page": 10,
+        "imagePath": "/catalogs/de-vinuri-2026-02-23/crops/69cf577a-1278-4f50-8349-24df0ad300fa.webp",
+        "crop": {
+          "x": 0.0075,
+          "y": 0.05959,
+          "w": 0.31833,
+          "h": 0.90434
+        },
+        "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69cf577a-1278-4f50-8349-24df0ad300fa"
+      }
+    ],
+    "isActive": true,
+    "scrapedAt": "2026-04-10T11:29:44.700Z"
+  },
+  {
+    "slug": "de-marti-14-04-pana-duminica-19-04-2026-04-14",
+    "sourceId": "54184",
+    "publicationId": "53141",
+    "title": "de marți 14.04 până duminică 19.04",
+    "description": "Catalog Lidl valabil 2026-04-14 — 2026-04-19",
+    "startDate": "2026-04-14",
+    "endDate": "2026-04-19",
+    "coverImage": "/catalogs/de-marti-14-04-pana-duminica-19-04-2026-04-14/pages/page_01.webp",
+    "pages": [
+      {
+        "pageNumber": 1,
+        "imagePath": "/catalogs/de-marti-14-04-pana-duminica-19-04-2026-04-14/pages/page_01.webp",
+        "width": 1200,
+        "height": 1524
+      },
+      {
+        "pageNumber": 2,
+        "imagePath": "/catalogs/de-marti-14-04-pana-duminica-19-04-2026-04-14/pages/page_02.webp",
+        "width": 1200,
+        "height": 1524
+      },
+      {
+        "pageNumber": 3,
+        "imagePath": "/catalogs/de-marti-14-04-pana-duminica-19-04-2026-04-14/pages/page_03.webp",
+        "width": 1200,
+        "height": 1524
+      },
+      {
+        "pageNumber": 4,
+        "imagePath": "/catalogs/de-marti-14-04-pana-duminica-19-04-2026-04-14/pages/page_04.webp",
+        "width": 1200,
+        "height": 1524
+      }
+    ],
+    "hotspots": {
+      "1": [
+        {
+          "id": "69d5ece5-7bd4-43bd-87f0-00740ad3027f",
+          "page": 1,
+          "crop": {
+            "x": 0.01167,
+            "y": 0.71063,
+            "w": 0.31833,
+            "h": 0.22703
+          },
+          "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69d5ece5-7bd4-43bd-87f0-00740ad3027f"
+        },
+        {
+          "id": "69d5ece6-2114-4f2d-9a2e-07950ad3027f",
+          "page": 1,
+          "crop": {
+            "x": 0.34333,
+            "y": 0.7126,
+            "w": 0.32417,
+            "h": 0.2231
+          },
+          "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69d5ece6-2114-4f2d-9a2e-07950ad3027f"
+        },
+        {
+          "id": "69d5ece6-cac0-440c-8458-00e40ad30090",
+          "page": 1,
+          "crop": {
+            "x": 0.66583,
+            "y": 0.71194,
+            "w": 0.32167,
+            "h": 0.2231
+          },
+          "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69d5ece6-cac0-440c-8458-00e40ad30090"
+        }
+      ],
+      "2": [
+        {
+          "id": "69d5ece6-03f4-4615-afd4-00270ad3021f",
+          "page": 2,
+          "crop": {
+            "x": 0.01333,
+            "y": 0.32415,
+            "w": 0.47083,
+            "h": 0.38451
+          },
+          "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69d5ece6-03f4-4615-afd4-00270ad3021f"
+        },
+        {
+          "id": "69d5ece7-98e4-424f-bff6-001f0ad3005b",
+          "page": 2,
+          "crop": {
+            "x": 0.00667,
+            "y": 0.71391,
+            "w": 0.39583,
+            "h": 0.22047
+          },
+          "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69d5ece7-98e4-424f-bff6-001f0ad3005b"
+        },
+        {
+          "id": "69d5ece8-2cf8-4207-a4da-0f4d0ad3013c",
+          "page": 2,
+          "crop": {
+            "x": 0.475,
+            "y": 0.71457,
+            "w": 0.51,
+            "h": 0.22047
+          },
+          "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69d5ece8-2cf8-4207-a4da-0f4d0ad3013c"
+        },
+        {
+          "id": "69d5ece8-b8c4-4676-85b5-e9a10ad3005e",
+          "page": 2,
+          "crop": {
+            "x": 0.485,
+            "y": 0.30577,
+            "w": 0.48917,
+            "h": 0.40617
+          },
+          "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69d5ece8-b8c4-4676-85b5-e9a10ad3005e"
+        }
+      ],
+      "3": [
+        {
+          "id": "69d5eceb-9abc-4324-8a05-00e30ad3021f",
+          "page": 3,
+          "crop": {
+            "x": 0.0175,
+            "y": 0.51772,
+            "w": 0.31,
+            "h": 0.19094
+          },
+          "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69d5eceb-9abc-4324-8a05-00e30ad3021f"
+        },
+        {
+          "id": "69d5eceb-e3a0-4839-ab46-00730ad3013f",
+          "page": 3,
+          "crop": {
+            "x": 0.68333,
+            "y": 0.30577,
+            "w": 0.28667,
+            "h": 0.19816
+          },
+          "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69d5eceb-e3a0-4839-ab46-00730ad3013f"
+        },
+        {
+          "id": "69d5eced-087c-4da9-857f-00470ad301f6",
+          "page": 3,
+          "crop": {
+            "x": 0.02417,
+            "y": 0.0643,
+            "w": 0.31167,
+            "h": 0.22572
+          },
+          "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69d5eced-087c-4da9-857f-00470ad301f6"
+        },
+        {
+          "id": "69d5eced-6bfc-4f00-a233-00d10ad3028b",
+          "page": 3,
+          "crop": {
+            "x": 0.68333,
+            "y": 0.51706,
+            "w": 0.29583,
+            "h": 0.19029
+          },
+          "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69d5eced-6bfc-4f00-a233-00d10ad3028b"
+        },
+        {
+          "id": "69d5eced-a2ac-4d61-a8ad-007e0ad30280",
+          "page": 3,
+          "crop": {
+            "x": 0.34833,
+            "y": 0.06496,
+            "w": 0.31167,
+            "h": 0.22572
+          },
+          "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69d5eced-a2ac-4d61-a8ad-007e0ad30280"
+        },
+        {
+          "id": "69d5ecee-e6e0-4b3b-954e-00310ad300fc",
+          "page": 3,
+          "crop": {
+            "x": 0.66833,
+            "y": 0.06365,
+            "w": 0.30583,
+            "h": 0.22703
+          },
+          "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69d5ecee-e6e0-4b3b-954e-00310ad300fc"
+        },
+        {
+          "id": "69d5ecef-9ae8-4096-adf5-00830ad3027f",
+          "page": 3,
+          "crop": {
+            "x": 0.02,
+            "y": 0.31627,
+            "w": 0.3425,
+            "h": 0.18898
+          },
+          "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69d5ecef-9ae8-4096-adf5-00830ad3027f"
+        },
+        {
+          "id": "69d5ecf0-1c94-49fe-b3ef-00d60ad3005b",
+          "page": 3,
+          "crop": {
+            "x": 0.35583,
+            "y": 0.51575,
+            "w": 0.32167,
+            "h": 0.1916
+          },
+          "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69d5ecf0-1c94-49fe-b3ef-00d60ad3005b"
+        },
+        {
+          "id": "69d5ecf0-4e3c-40db-9bab-007d0ad30090",
+          "page": 3,
+          "crop": {
+            "x": 0.355,
+            "y": 0.71654,
+            "w": 0.30833,
+            "h": 0.21719
+          },
+          "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69d5ecf0-4e3c-40db-9bab-007d0ad30090"
+        },
+        {
+          "id": "69d5ecf1-78f0-49c6-a288-009b0ad3005b",
+          "page": 3,
+          "crop": {
+            "x": 0.3675,
+            "y": 0.31102,
+            "w": 0.31083,
+            "h": 0.19029
+          },
+          "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69d5ecf1-78f0-49c6-a288-009b0ad3005b"
+        },
+        {
+          "id": "69d5ecf1-fef0-4053-8d4e-00410ad30274",
+          "page": 3,
+          "crop": {
+            "x": 0.01667,
+            "y": 0.71391,
+            "w": 0.325,
+            "h": 0.22047
+          },
+          "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69d5ecf1-fef0-4053-8d4e-00410ad30274"
+        },
+        {
+          "id": "69d5ecf2-df4c-4740-b7bb-00430ad3021f",
+          "page": 3,
+          "crop": {
+            "x": 0.67333,
+            "y": 0.71391,
+            "w": 0.315,
+            "h": 0.21916
+          },
+          "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69d5ecf2-df4c-4740-b7bb-00430ad3021f"
+        }
+      ],
+      "4": [
+        {
+          "id": "69d5eced-8670-4886-bf60-00740ad30274",
+          "page": 4,
+          "crop": {
+            "x": 0.49833,
+            "y": 0.50131,
+            "w": 0.47917,
+            "h": 0.21522
+          },
+          "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69d5eced-8670-4886-bf60-00740ad30274"
+        },
+        {
+          "id": "69d5ecee-d874-48de-8e2b-00200ad30274",
+          "page": 4,
+          "crop": {
+            "x": 0.49667,
+            "y": 0.25262,
+            "w": 0.4775,
+            "h": 0.23753
+          },
+          "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69d5ecee-d874-48de-8e2b-00200ad30274"
+        },
+        {
+          "id": "69d5ecef-1ee4-45d5-8d5a-001c0ad3016a",
+          "page": 4,
+          "crop": {
+            "x": 0.00917,
+            "y": 0.25591,
+            "w": 0.46167,
+            "h": 0.23097
+          },
+          "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69d5ecef-1ee4-45d5-8d5a-001c0ad3016a"
+        },
+        {
+          "id": "69d5ecef-e71c-490f-a660-00e10ad3013f",
+          "page": 4,
+          "crop": {
+            "x": 0.0275,
+            "y": 0.49344,
+            "w": 0.46417,
+            "h": 0.22244
+          },
+          "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69d5ecef-e71c-490f-a660-00e10ad3013f"
+        },
+        {
+          "id": "69d5ecf0-aff0-4a73-8a97-00e80ad3021f",
+          "page": 4,
+          "crop": {
+            "x": 0.49917,
+            "y": 0.71916,
+            "w": 0.485,
+            "h": 0.2126
+          },
+          "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69d5ecf0-aff0-4a73-8a97-00e80ad3021f"
+        },
+        {
+          "id": "69d5ecf1-1200-4d0b-9c9d-001b0ad300ed",
+          "page": 4,
+          "crop": {
+            "x": 0.015,
+            "y": 0.72375,
+            "w": 0.47667,
+            "h": 0.20932
+          },
+          "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69d5ecf1-1200-4d0b-9c9d-001b0ad300ed"
+        }
+      ]
+    },
+    "products": [
+      {
+        "id": "69d5ece5-7bd4-43bd-87f0-00740ad3027f",
+        "name": "Pulpă de porc, fără os",
+        "price": 1.59,
+        "oldPrice": 2.29,
+        "discount": "-30%",
+        "page": 1,
+        "imagePath": "/catalogs/de-marti-14-04-pana-duminica-19-04-2026-04-14/crops/69d5ece5-7bd4-43bd-87f0-00740ad3027f.webp",
+        "crop": {
+          "x": 0.01167,
+          "y": 0.71063,
+          "w": 0.31833,
+          "h": 0.22703
+        },
+        "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69d5ece5-7bd4-43bd-87f0-00740ad3027f"
+      },
+      {
+        "id": "69d5ece6-2114-4f2d-9a2e-07950ad3027f",
+        "name": "Morcovi",
+        "price": 2.49,
+        "oldPrice": 3.49,
+        "discount": "-28%",
+        "page": 1,
+        "imagePath": "/catalogs/de-marti-14-04-pana-duminica-19-04-2026-04-14/crops/69d5ece6-2114-4f2d-9a2e-07950ad3027f.webp",
+        "crop": {
+          "x": 0.34333,
+          "y": 0.7126,
+          "w": 0.32417,
+          "h": 0.2231
+        },
+        "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69d5ece6-2114-4f2d-9a2e-07950ad3027f"
+      },
+      {
+        "id": "69d5ece6-cac0-440c-8458-00e40ad30090",
+        "name": "Struguri negri / roze fără sâmburi",
+        "price": 10.99,
+        "oldPrice": 14.99,
+        "discount": "-26%",
+        "page": 1,
+        "imagePath": "/catalogs/de-marti-14-04-pana-duminica-19-04-2026-04-14/crops/69d5ece6-cac0-440c-8458-00e40ad30090.webp",
+        "crop": {
+          "x": 0.66583,
+          "y": 0.71194,
+          "w": 0.32167,
+          "h": 0.2231
+        },
+        "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69d5ece6-cac0-440c-8458-00e40ad30090"
+      },
+      {
+        "id": "69d5ece6-03f4-4615-afd4-00270ad3021f",
+        "name": "ANTIPASTI MIX Prosciutto di Parma DOP, Coppa, Salam",
+        "price": 8.49,
+        "oldPrice": 12.29,
+        "discount": "-30%",
+        "page": 2,
+        "imagePath": "/catalogs/de-marti-14-04-pana-duminica-19-04-2026-04-14/crops/69d5ece6-03f4-4615-afd4-00270ad3021f.webp",
+        "crop": {
+          "x": 0.01333,
+          "y": 0.32415,
+          "w": 0.47083,
+          "h": 0.38451
+        },
+        "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69d5ece6-03f4-4615-afd4-00270ad3021f"
+      },
+      {
+        "id": "69d5ece7-98e4-424f-bff6-001f0ad3005b",
+        "name": "Salam Sinaia",
+        "price": 9.99,
+        "oldPrice": 14.49,
+        "discount": "-31%",
+        "page": 2,
+        "imagePath": "/catalogs/de-marti-14-04-pana-duminica-19-04-2026-04-14/crops/69d5ece7-98e4-424f-bff6-001f0ad3005b.webp",
+        "crop": {
+          "x": 0.00667,
+          "y": 0.71391,
+          "w": 0.39583,
+          "h": 0.22047
+        },
+        "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69d5ece7-98e4-424f-bff6-001f0ad3005b"
+      },
+      {
+        "id": "69d5ece8-2cf8-4207-a4da-0f4d0ad3013c",
+        "name": "Unt cu sare de mare din Camargue I.G.P.",
+        "price": 6.49,
+        "oldPrice": 9.99,
+        "discount": "-35%",
+        "page": 2,
+        "imagePath": "/catalogs/de-marti-14-04-pana-duminica-19-04-2026-04-14/crops/69d5ece8-2cf8-4207-a4da-0f4d0ad3013c.webp",
+        "crop": {
+          "x": 0.475,
+          "y": 0.71457,
+          "w": 0.51,
+          "h": 0.22047
+        },
+        "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69d5ece8-2cf8-4207-a4da-0f4d0ad3013c"
+      },
+      {
+        "id": "69d5ece8-b8c4-4676-85b5-e9a10ad3005e",
+        "name": "Bio Gouda / Maasdammer",
+        "price": 8.99,
+        "oldPrice": 13.49,
+        "discount": "-33%",
+        "page": 2,
+        "imagePath": "/catalogs/de-marti-14-04-pana-duminica-19-04-2026-04-14/crops/69d5ece8-b8c4-4676-85b5-e9a10ad3005e.webp",
+        "crop": {
+          "x": 0.485,
+          "y": 0.30577,
+          "w": 0.48917,
+          "h": 0.40617
+        },
+        "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69d5ece8-b8c4-4676-85b5-e9a10ad3005e"
+      },
+      {
+        "id": "69d5eceb-9abc-4324-8a05-00e30ad3021f",
+        "name": "Lapte Barista UHT",
+        "price": 4.49,
+        "oldPrice": 6.99,
+        "discount": "-35%",
+        "page": 3,
+        "imagePath": "/catalogs/de-marti-14-04-pana-duminica-19-04-2026-04-14/crops/69d5eceb-9abc-4324-8a05-00e30ad3021f.webp",
+        "crop": {
+          "x": 0.0175,
+          "y": 0.51772,
+          "w": 0.31,
+          "h": 0.19094
+        },
+        "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69d5eceb-9abc-4324-8a05-00e30ad3021f"
+      },
+      {
+        "id": "69d5eceb-e3a0-4839-ab46-00730ad3013f",
+        "name": "Sfeclă roșie fâșii marinată",
+        "price": 4.29,
+        "oldPrice": 6.69,
+        "discount": "-35%",
+        "page": 3,
+        "imagePath": "/catalogs/de-marti-14-04-pana-duminica-19-04-2026-04-14/crops/69d5eceb-e3a0-4839-ab46-00730ad3013f.webp",
+        "crop": {
+          "x": 0.68333,
+          "y": 0.30577,
+          "w": 0.28667,
+          "h": 0.19816
+        },
+        "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69d5eceb-e3a0-4839-ab46-00730ad3013f"
+      },
+      {
+        "id": "69d5eced-087c-4da9-857f-00470ad301f6",
+        "name": "Desert High Protein Pudding",
+        "price": 3.24,
+        "oldPrice": 4.99,
+        "discount": "-70%",
+        "page": 3,
+        "imagePath": "/catalogs/de-marti-14-04-pana-duminica-19-04-2026-04-14/crops/69d5eced-087c-4da9-857f-00470ad301f6.webp",
+        "crop": {
+          "x": 0.02417,
+          "y": 0.0643,
+          "w": 0.31167,
+          "h": 0.22572
+        },
+        "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69d5eced-087c-4da9-857f-00470ad301f6"
+      },
+      {
+        "id": "69d5eced-6bfc-4f00-a233-00d10ad3028b",
+        "name": "Amandin - ă",
+        "price": 7.49,
+        "oldPrice": 11.99,
+        "discount": "-37%",
+        "page": 3,
+        "imagePath": "/catalogs/de-marti-14-04-pana-duminica-19-04-2026-04-14/crops/69d5eced-6bfc-4f00-a233-00d10ad3028b.webp",
+        "crop": {
+          "x": 0.68333,
+          "y": 0.51706,
+          "w": 0.29583,
+          "h": 0.19029
+        },
+        "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69d5eced-6bfc-4f00-a233-00d10ad3028b"
+      },
+      {
+        "id": "69d5eced-a2ac-4d61-a8ad-007e0ad30280",
+        "name": "Bucăți de ton în ulei de floarea-soarelui",
+        "price": 5.99,
+        "oldPrice": 8.99,
+        "discount": "3 la pret de 2",
+        "page": 3,
+        "imagePath": "/catalogs/de-marti-14-04-pana-duminica-19-04-2026-04-14/crops/69d5eced-a2ac-4d61-a8ad-007e0ad30280.webp",
+        "crop": {
+          "x": 0.34833,
+          "y": 0.06496,
+          "w": 0.31167,
+          "h": 0.22572
+        },
+        "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69d5eced-a2ac-4d61-a8ad-007e0ad30280"
+      },
+      {
+        "id": "69d5ecee-e6e0-4b3b-954e-00310ad300fc",
+        "name": "Brânză topită",
+        "price": 4.19,
+        "oldPrice": 6.99,
+        "discount": "-80%",
+        "page": 3,
+        "imagePath": "/catalogs/de-marti-14-04-pana-duminica-19-04-2026-04-14/crops/69d5ecee-e6e0-4b3b-954e-00310ad300fc.webp",
+        "crop": {
+          "x": 0.66833,
+          "y": 0.06365,
+          "w": 0.30583,
+          "h": 0.22703
+        },
+        "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69d5ecee-e6e0-4b3b-954e-00310ad300fc"
+      },
+      {
+        "id": "69d5ecef-9ae8-4096-adf5-00830ad3027f",
+        "name": "Cordon Bleu din piept de curcan",
+        "price": 14.99,
+        "oldPrice": 22.39,
+        "discount": "-33%",
+        "page": 3,
+        "imagePath": "/catalogs/de-marti-14-04-pana-duminica-19-04-2026-04-14/crops/69d5ecef-9ae8-4096-adf5-00830ad3027f.webp",
+        "crop": {
+          "x": 0.02,
+          "y": 0.31627,
+          "w": 0.3425,
+          "h": 0.18898
+        },
+        "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69d5ecef-9ae8-4096-adf5-00830ad3027f"
+      },
+      {
+        "id": "69d5ecf0-1c94-49fe-b3ef-00d60ad3005b",
+        "name": "Plăcintă",
+        "price": 10.99,
+        "oldPrice": 16.99,
+        "discount": "-35%",
+        "page": 3,
+        "imagePath": "/catalogs/de-marti-14-04-pana-duminica-19-04-2026-04-14/crops/69d5ecf0-1c94-49fe-b3ef-00d60ad3005b.webp",
+        "crop": {
+          "x": 0.35583,
+          "y": 0.51575,
+          "w": 0.32167,
+          "h": 0.1916
+        },
+        "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69d5ecf0-1c94-49fe-b3ef-00d60ad3005b"
+      },
+      {
+        "id": "69d5ecf0-4e3c-40db-9bab-007d0ad30090",
+        "name": "Hrană umedă pentru câini bucăți în sos",
+        "price": 4.29,
+        "oldPrice": 6.89,
+        "discount": "-37%",
+        "page": 3,
+        "imagePath": "/catalogs/de-marti-14-04-pana-duminica-19-04-2026-04-14/crops/69d5ecf0-4e3c-40db-9bab-007d0ad30090.webp",
+        "crop": {
+          "x": 0.355,
+          "y": 0.71654,
+          "w": 0.30833,
+          "h": 0.21719
+        },
+        "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69d5ecf0-4e3c-40db-9bab-007d0ad30090"
+      },
+      {
+        "id": "69d5ecf1-78f0-49c6-a288-009b0ad3005b",
+        "name": "Cartofi pai pentru friteuză",
+        "price": 12.49,
+        "oldPrice": 17.99,
+        "discount": "-30%",
+        "page": 3,
+        "imagePath": "/catalogs/de-marti-14-04-pana-duminica-19-04-2026-04-14/crops/69d5ecf1-78f0-49c6-a288-009b0ad3005b.webp",
+        "crop": {
+          "x": 0.3675,
+          "y": 0.31102,
+          "w": 0.31083,
+          "h": 0.19029
+        },
+        "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69d5ecf1-78f0-49c6-a288-009b0ad3005b"
+      },
+      {
+        "id": "69d5ecf1-fef0-4053-8d4e-00410ad30274",
+        "name": "Cafea de origine, macinată",
+        "price": 14.79,
+        "oldPrice": 22.99,
+        "discount": "-35%",
+        "page": 3,
+        "imagePath": "/catalogs/de-marti-14-04-pana-duminica-19-04-2026-04-14/crops/69d5ecf1-fef0-4053-8d4e-00410ad30274.webp",
+        "crop": {
+          "x": 0.01667,
+          "y": 0.71391,
+          "w": 0.325,
+          "h": 0.22047
+        },
+        "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69d5ecf1-fef0-4053-8d4e-00410ad30274"
+      },
+      {
+        "id": "69d5ecf2-df4c-4740-b7bb-00430ad3021f",
+        "name": "Hrană umedă pentru pisici bucăți în sos / aspic",
+        "price": 8.99,
+        "oldPrice": 14.75,
+        "discount": "-39%",
+        "page": 3,
+        "imagePath": "/catalogs/de-marti-14-04-pana-duminica-19-04-2026-04-14/crops/69d5ecf2-df4c-4740-b7bb-00430ad3021f.webp",
+        "crop": {
+          "x": 0.67333,
+          "y": 0.71391,
+          "w": 0.315,
+          "h": 0.21916
+        },
+        "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69d5ecf2-df4c-4740-b7bb-00430ad3021f"
+      },
+      {
+        "id": "69d5eced-8670-4886-bf60-00740ad30274",
+        "name": "Comoda TV",
+        "price": 139,
+        "oldPrice": 279,
+        "discount": "-50%",
+        "page": 4,
+        "imagePath": "/catalogs/de-marti-14-04-pana-duminica-19-04-2026-04-14/crops/69d5eced-8670-4886-bf60-00740ad30274.webp",
+        "crop": {
+          "x": 0.49833,
+          "y": 0.50131,
+          "w": 0.47917,
+          "h": 0.21522
+        },
+        "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69d5eced-8670-4886-bf60-00740ad30274"
+      },
+      {
+        "id": "69d5ecee-d874-48de-8e2b-00200ad30274",
+        "name": "Mașină de tuns gazonul",
+        "price": 249,
+        "oldPrice": 499,
+        "discount": "-50%",
+        "page": 4,
+        "imagePath": "/catalogs/de-marti-14-04-pana-duminica-19-04-2026-04-14/crops/69d5ecee-d874-48de-8e2b-00200ad30274.webp",
+        "crop": {
+          "x": 0.49667,
+          "y": 0.25262,
+          "w": 0.4775,
+          "h": 0.23753
+        },
+        "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69d5ecee-d874-48de-8e2b-00200ad30274"
+      },
+      {
+        "id": "69d5ecef-1ee4-45d5-8d5a-001c0ad3016a",
+        "name": "Mop cu aburi",
+        "price": 159,
+        "oldPrice": 329,
+        "discount": "-51%",
+        "page": 4,
+        "imagePath": "/catalogs/de-marti-14-04-pana-duminica-19-04-2026-04-14/crops/69d5ecef-1ee4-45d5-8d5a-001c0ad3016a.webp",
+        "crop": {
+          "x": 0.00917,
+          "y": 0.25591,
+          "w": 0.46167,
+          "h": 0.23097
+        },
+        "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69d5ecef-1ee4-45d5-8d5a-001c0ad3016a"
+      },
+      {
+        "id": "69d5ecef-e71c-490f-a660-00e10ad3013f",
+        "name": "Aparat de călcat cămăşi şi bluze",
+        "price": 149,
+        "oldPrice": 299,
+        "discount": "-50%",
+        "page": 4,
+        "imagePath": "/catalogs/de-marti-14-04-pana-duminica-19-04-2026-04-14/crops/69d5ecef-e71c-490f-a660-00e10ad3013f.webp",
+        "crop": {
+          "x": 0.0275,
+          "y": 0.49344,
+          "w": 0.46417,
+          "h": 0.22244
+        },
+        "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69d5ecef-e71c-490f-a660-00e10ad3013f"
+      },
+      {
+        "id": "69d5ecf0-aff0-4a73-8a97-00e80ad3021f",
+        "name": "Ciocan rotopercuter",
+        "price": 89.99,
+        "oldPrice": 199,
+        "discount": "-54%",
+        "page": 4,
+        "imagePath": "/catalogs/de-marti-14-04-pana-duminica-19-04-2026-04-14/crops/69d5ecf0-aff0-4a73-8a97-00e80ad3021f.webp",
+        "crop": {
+          "x": 0.49917,
+          "y": 0.71916,
+          "w": 0.485,
+          "h": 0.2126
+        },
+        "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69d5ecf0-aff0-4a73-8a97-00e80ad3021f"
+      },
+      {
+        "id": "69d5ecf1-1200-4d0b-9c9d-001b0ad300ed",
+        "name": "Total - Fierăstrău telescopic",
+        "price": 89.99,
+        "oldPrice": 199,
+        "discount": "-54%",
+        "page": 4,
+        "imagePath": "/catalogs/de-marti-14-04-pana-duminica-19-04-2026-04-14/crops/69d5ecf1-1200-4d0b-9c9d-001b0ad300ed.webp",
+        "crop": {
+          "x": 0.015,
+          "y": 0.72375,
+          "w": 0.47667,
+          "h": 0.20932
+        },
+        "landingUrl": "https://tag-landing.shopfully.cloud/ro_ro/69d5ecf1-1200-4d0b-9c9d-001b0ad300ed"
+      }
+    ],
+    "isActive": false,
+    "scrapedAt": "2026-04-10T11:29:44.311Z"
+  }
+]
