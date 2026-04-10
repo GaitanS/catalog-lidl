@@ -94,6 +94,13 @@ export default function RootLayout({
     return (
         <html lang="ro" className="h-full antialiased" data-scroll-behavior="smooth">
             <head>
+                <meta name="google-adsense-account" content="ca-pub-4509784482094331" />
+                <Script
+                    id="adsense"
+                    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4509784482094331"
+                    crossOrigin="anonymous"
+                    strategy="afterInteractive"
+                />
                 <Script
                     id="org-ld"
                     type="application/ld+json"
