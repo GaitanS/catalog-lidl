@@ -1,5 +1,4 @@
 import type { Metadata, Viewport } from "next";
-import Script from "next/script";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -95,26 +94,19 @@ export default function RootLayout({
         <html lang="ro" className="h-full antialiased" data-scroll-behavior="smooth">
             <head>
                 <meta name="google-adsense-account" content="ca-pub-4509784482094331" />
-                <Script
-                    id="adsense"
+                <script
+                    async
                     src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4509784482094331"
                     crossOrigin="anonymous"
-                    strategy="afterInteractive"
                 />
-                <Script
-                    id="org-ld"
+                <script
                     type="application/ld+json"
-                    strategy="beforeInteractive"
-                >
-                    {JSON.stringify(organizationLd)}
-                </Script>
-                <Script
-                    id="website-ld"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationLd) }}
+                />
+                <script
                     type="application/ld+json"
-                    strategy="beforeInteractive"
-                >
-                    {JSON.stringify(websiteLd)}
-                </Script>
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteLd) }}
+                />
             </head>
             <body className="min-h-full flex flex-col bg-gray-50">
                 <Header />
