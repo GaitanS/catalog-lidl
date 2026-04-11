@@ -40,7 +40,6 @@ export default function CatalogCard({ catalog, priority = false }: CatalogCardPr
                         src={catalog.thumbnailImage || catalog.coverImage}
                         alt={catalog.title}
                         loading={priority ? "eager" : "lazy"}
-                        fetchPriority={priority ? "high" : undefined}
                         className="absolute inset-0 w-full h-full object-cover"
                     />
                 ) : (

@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import MobileNav from "@/components/MobileNav";
 import ShoppingList from "@/components/ShoppingList";
 import ServiceWorkerRegister from "@/components/ServiceWorkerRegister";
+import AdSenseLoader from "@/components/AdSenseLoader";
 
 export const metadata: Metadata = {
     metadataBase: new URL('https://cataloglidl.ro'),
@@ -98,11 +99,6 @@ export default function RootLayout({
                 <link rel="preconnect" href="https://fundingchoicesmessages.google.com" />
                 <meta name="google-adsense-account" content="ca-pub-4509784482094331" />
                 <script
-                    async
-                    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4509784482094331"
-                    crossOrigin="anonymous"
-                />
-                <script
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationLd) }}
                 />
@@ -120,6 +116,7 @@ export default function RootLayout({
                 <MobileNav />
                 <ShoppingList />
                 <ServiceWorkerRegister />
+                <AdSenseLoader />
             </body>
         </html>
     );

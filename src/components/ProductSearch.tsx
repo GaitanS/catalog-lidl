@@ -21,6 +21,7 @@ function removeDiacritics(text: string): string {
 export default function ProductSearch({ products }: ProductSearchProps) {
     const [query, setQuery] = useState('');
     const [selectedCategory, setSelectedCategory] = useState<string>('');
+    const [showAll, setShowAll] = useState(false);
 
     const categories = useMemo(() => {
         const cats = new Set(products.map(p => p.category));
@@ -104,7 +105,7 @@ export default function ProductSearch({ products }: ProductSearchProps) {
 
             {/* Product grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                {filtered.map((product) => (
+                {(showAll || query || selectedCategory ? filtered : filtered.slice(0, 10)).map((product) => (
                     <div key={product.slug} className="bg-white rounded-xl border border-gray-100 p-4 flex items-center gap-3 shadow-sm hover:border-lidl-blue hover:shadow-md transition-all">
                         <Link href={`/produs/${product.slug}`} className="flex items-center gap-3 flex-1 min-w-0 active:scale-[0.98] transition-transform">
                             <div className="shrink-0 w-14 h-14 bg-gray-50 rounded-lg flex items-center justify-center overflow-hidden">
@@ -142,6 +143,15 @@ export default function ProductSearch({ products }: ProductSearchProps) {
                     </div>
                 ))}
             </div>
+
+            {!showAll && !query && !selectedCategory && filtered.length > 10 && (
+                <button
+                    onClick={() => setShowAll(true)}
+                    className="w-full mt-3 py-3 bg-white border border-gray-200 rounded-xl text-sm font-medium text-lidl-blue hover:border-lidl-blue transition-colors"
+                >
+                    Vezi toate {filtered.length} produse
+                </button>
+            )}
 
             {filtered.length === 0 && (
                 <div className="text-center py-12 text-gray-400">
