@@ -8,6 +8,7 @@
     "startDate": "2026-04-06",
     "endDate": "2026-04-12",
     "coverImage": "/catalogs/de-luni-06-04-pana-sambata-11-04-2026-04-06/pages/page_01.webp",
+    "coverThumb": "/catalogs/de-luni-06-04-pana-sambata-11-04-2026-04-06/pages/thumb_01.webp",
     "pages": [
       {
         "pageNumber": 1,
@@ -674,7 +675,7 @@
       }
     ],
     "isActive": true,
-    "scrapedAt": "2026-04-11T15:26:58.131Z"
+    "scrapedAt": "2026-04-11T16:00:20.829Z"
   },
   {
     "slug": "silvercrest-2026-03-30",
@@ -685,6 +686,7 @@
     "startDate": "2026-03-30",
     "endDate": "2026-05-10",
     "coverImage": "/catalogs/silvercrest-2026-03-30/pages/page_01.webp",
+    "coverThumb": "/catalogs/silvercrest-2026-03-30/pages/thumb_01.webp",
     "pages": [
       {
         "pageNumber": 1,
@@ -1219,7 +1221,7 @@
       }
     ],
     "isActive": true,
-    "scrapedAt": "2026-04-11T15:27:00.535Z"
+    "scrapedAt": "2026-04-11T16:00:22.699Z"
   },
   {
     "slug": "de-vinuri-2026-02-23",
@@ -1230,6 +1232,7 @@
     "startDate": "2026-02-23",
     "endDate": "2026-04-30",
     "coverImage": "/catalogs/de-vinuri-2026-02-23/pages/page_01.webp",
+    "coverThumb": "/catalogs/de-vinuri-2026-02-23/pages/thumb_01.webp",
     "pages": [
       {
         "pageNumber": 1,
@@ -1896,7 +1899,7 @@
       }
     ],
     "isActive": true,
-    "scrapedAt": "2026-04-11T15:26:52.668Z"
+    "scrapedAt": "2026-04-11T16:00:16.947Z"
   },
   {
     "slug": "de-marti-14-04-pana-duminica-19-04-2026-04-14",
@@ -1907,6 +1910,7 @@
     "startDate": "2026-04-14",
     "endDate": "2026-04-19",
     "coverImage": "/catalogs/de-marti-14-04-pana-duminica-19-04-2026-04-14/pages/page_01.webp",
+    "coverThumb": "/catalogs/de-marti-14-04-pana-duminica-19-04-2026-04-14/pages/thumb_01.webp",
     "pages": [
       {
         "pageNumber": 1,
@@ -2237,6 +2241,6 @@
       }
     ],
     "isActive": false,
-    "scrapedAt": "2026-04-11T15:26:49.360Z"
+    "scrapedAt": "2026-04-11T16:00:12.619Z"
   }
 ]

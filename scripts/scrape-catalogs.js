@@ -417,6 +417,23 @@ async function scrapeCatalog(catalog) {
     }
     console.log(`  images: ${downloadCount} from CDN (upscaled to 400px)`);
 
+    // Generate cover thumbnail (400px wide) for homepage cards
+    let coverThumb = pageEntries[0]?.imagePath || '';
+    if (pageEntries[0]) {
+        const thumbFile = path.join(OUTPUT_DIR, slug, 'pages', 'thumb_01.webp');
+        const thumbPath = `/catalogs/${slug}/pages/thumb_01.webp`;
+        const srcFile = path.join(OUTPUT_DIR, slug, 'pages', 'page_01.webp');
+        try {
+            if (fs.existsSync(srcFile)) {
+                await sharp(srcFile)
+                    .resize({ width: 400 })
+                    .webp({ quality: 80 })
+                    .toFile(thumbFile);
+                coverThumb = thumbPath;
+            }
+        } catch {}
+    }
+
     const enrichmentsByPage = {};
 
     return {
@@ -428,6 +445,7 @@ async function scrapeCatalog(catalog) {
         startDate,
         endDate,
         coverImage: pageEntries[0]?.imagePath || '',
+        coverThumb,
         pages: pageEntries,
         hotspots: enrichmentsByPage,
         products,

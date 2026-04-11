@@ -160,6 +160,7 @@ interface ScrapedCatalog {
     startDate: string;
     endDate: string;
     coverImage: string;
+    coverThumb?: string;
     pages: ScrapedPage[];
     hotspots: Record<string, ScrapedHotspot[]>;
     products?: ScrapedProduct[];
@@ -225,7 +226,7 @@ function buildFromScraped(scraped: ScrapedCatalog): Catalog {
         startDate: scraped.startDate,
         endDate: scraped.endDate,
         coverImage: scraped.coverImage || pages[0]?.imageUrl || '',
-        thumbnailImage: scraped.coverImage || pages[0]?.imageUrl || '',
+        thumbnailImage: scraped.coverThumb || scraped.coverImage || pages[0]?.imageUrl || '',
         pages,
         products,
         categories: categoriesForProducts(products),

@@ -3,6 +3,7 @@ import type { Catalog } from '@/data/catalogs';
 
 interface CatalogCardProps {
     catalog: Catalog;
+    priority?: boolean;
 }
 
 function formatDate(dateStr: string): string {
@@ -22,7 +23,7 @@ function daysLeft(endDate: string): number {
     return Math.ceil((end.getTime() - today.getTime()) / (1000 * 60 * 60 * 24));
 }
 
-export default function CatalogCard({ catalog }: CatalogCardProps) {
+export default function CatalogCard({ catalog, priority = false }: CatalogCardProps) {
     const active = isActive(catalog);
     const remaining = daysLeft(catalog.endDate);
 
@@ -36,9 +37,10 @@ export default function CatalogCard({ catalog }: CatalogCardProps) {
                 {catalog.coverImage ? (
                     /* eslint-disable-next-line @next/next/no-img-element */
                     <img
-                        src={catalog.coverImage}
+                        src={catalog.thumbnailImage || catalog.coverImage}
                         alt={catalog.title}
-                        loading="lazy"
+                        loading={priority ? "eager" : "lazy"}
+                        fetchPriority={priority ? "high" : undefined}
                         className="absolute inset-0 w-full h-full object-cover"
                     />
                 ) : (

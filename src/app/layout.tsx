@@ -93,6 +93,9 @@ export default function RootLayout({
     return (
         <html lang="ro" className="h-full antialiased" data-scroll-behavior="smooth">
             <head>
+                <link rel="preconnect" href="https://fonts.googleapis.com" />
+                <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+                <link rel="preconnect" href="https://fundingchoicesmessages.google.com" />
                 <meta name="google-adsense-account" content="ca-pub-4509784482094331" />
                 <script
                     async

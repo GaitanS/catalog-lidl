@@ -135,8 +135,8 @@ export default function HomePage() {
                         </Link>
                     </div>
                     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-5">
-                        {activeCatalogs.map((catalog) => (
-                            <CatalogCard key={catalog.slug} catalog={catalog} />
+                        {activeCatalogs.map((catalog, i) => (
+                            <CatalogCard key={catalog.slug} catalog={catalog} priority={i === 0} />
                         ))}
                     </div>
                 </section>
