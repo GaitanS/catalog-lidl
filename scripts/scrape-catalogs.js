@@ -366,67 +366,35 @@ async function scrapeCatalog(catalog) {
     const products = extractProducts(detailHtml);
     console.log(`  products: ${products.length} from flyerGibs`);
 
-    // Step 5: fetch enrichment hotspots for high-res crop coordinates
-    const enrichmentsByPage = {};
-    const maxPage = Math.max(...pageKeys.map(Number));
-    const numBundles = Math.ceil(maxPage / 10);
-    for (let bundle = 1; bundle <= numBundles; bundle++) {
-        try {
-            const enrRaw = (await fetchUrl(ENRICH_API(pubId, bundle))).toString('utf-8');
-            const enrJson = JSON.parse(enrRaw);
-            const parsed = parseEnrichmentBundle(enrJson);
-            Object.assign(enrichmentsByPage, parsed);
-        } catch {
-            // Enrichment is optional
-        }
-    }
-
-    // Build a map of enrichment ID → hotspot for matching with flyerGibs products
-    const hotspotMap = new Map();
-    for (const [pageKey, hotspots] of Object.entries(enrichmentsByPage)) {
-        for (const hs of hotspots) {
-            hotspotMap.set(hs.id, { ...hs, page: Number(pageKey) });
-        }
-    }
-    console.log(`  hotspots: ${hotspotMap.size} for high-res cropping`);
-
-    // Step 6: crop high-res product images from catalog pages using enrichment coords
-    // flyerGibs IDs match enrichment IDs, so we get correct data + correct crop
+    // Step 5: download product images from Shopfully CDN
+    // CDN images are guaranteed correct (same source as name/price)
     const cropsDir = path.join(OUTPUT_DIR, slug, 'crops');
-    let cropCount = 0;
+    let downloadCount = 0;
     for (const product of products) {
-        const hs = hotspotMap.get(product.id);
-        if (!hs) {
-            // No enrichment hotspot — download CDN image as fallback (low-res)
-            if (product.imageUrl) {
-                const ext = product.imageUrl.includes('.webp') ? 'webp' : 'png';
-                const localFile = path.join(cropsDir, `${product.id}.${ext}`);
-                const localPath = `/catalogs/${slug}/crops/${product.id}.${ext}`;
-                try {
-                    const url = product.imageUrl.startsWith('http') ? product.imageUrl : `https://${product.imageUrl}`;
-                    await downloadImage(url, localFile);
-                    product.imagePath = localPath;
-                    cropCount++;
-                } catch { /* skip */ }
-            }
-            continue;
-        }
-
-        // High-res crop from catalog page
-        const pageEntry = pageEntries.find(p => p.pageNumber === hs.page);
-        if (!pageEntry) continue;
-        const pageFile = path.join(__dirname, '..', 'public', pageEntry.imagePath);
-        if (!fs.existsSync(pageFile)) continue;
-
-        const cropFile = path.join(cropsDir, `${product.id}.webp`);
-        const cropPath = `/catalogs/${slug}/crops/${product.id}.webp`;
+        if (!product.imageUrl) continue;
+        const localFile = path.join(cropsDir, `${product.id}.webp`);
+        const localPath = `/catalogs/${slug}/crops/${product.id}.webp`;
         try {
-            await cropHotspot(pageFile, hs, cropFile);
-            product.imagePath = cropPath;
-            cropCount++;
-        } catch { /* skip */ }
+            const url = product.imageUrl.startsWith('http') ? product.imageUrl : `https://${product.imageUrl}`;
+            // Download and convert to consistent webp format
+            const buffer = await fetchUrl(url);
+            const dir = path.dirname(localFile);
+            if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+            if (!fs.existsSync(localFile) || fs.statSync(localFile).size < 500) {
+                await sharp(buffer)
+                    .resize({ width: 400, withoutEnlargement: false, kernel: 'lanczos3' })
+                    .webp({ quality: 90 })
+                    .toFile(localFile);
+            }
+            product.imagePath = localPath;
+            downloadCount++;
+        } catch {
+            // Keep product without image
+        }
     }
-    console.log(`  images: ${cropCount} (high-res crops + CDN fallbacks)`);
+    console.log(`  images: ${downloadCount} from CDN (upscaled to 400px)`);
+
+    const enrichmentsByPage = {};
 
     return {
         slug,
