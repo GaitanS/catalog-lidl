@@ -9,6 +9,15 @@ interface ProductSearchProps {
     products: CatalogProduct[];
 }
 
+function removeDiacritics(text: string): string {
+    return text
+        .toLowerCase()
+        .replace(/[ăâ]/g, 'a')
+        .replace(/[î]/g, 'i')
+        .replace(/[ș]/g, 's')
+        .replace(/[ț]/g, 't');
+}
+
 export default function ProductSearch({ products }: ProductSearchProps) {
     const [query, setQuery] = useState('');
     const [selectedCategory, setSelectedCategory] = useState<string>('');
@@ -21,8 +30,12 @@ export default function ProductSearch({ products }: ProductSearchProps) {
     const filtered = useMemo(() => {
         let result = products;
         if (query.trim()) {
-            const q = query.toLowerCase();
-            result = result.filter(p => p.name.toLowerCase().includes(q) || p.category.toLowerCase().includes(q));
+            const q = removeDiacritics(query);
+            const words = q.split(/\s+/).filter(Boolean);
+            result = result.filter(p => {
+                const text = removeDiacritics(`${p.name} ${p.category} ${p.description || ''}`);
+                return words.every(w => text.includes(w));
+            });
         }
         if (selectedCategory) {
             result = result.filter(p => p.category === selectedCategory);

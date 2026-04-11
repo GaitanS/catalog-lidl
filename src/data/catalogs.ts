@@ -198,17 +198,24 @@ function buildFromScraped(scraped: ScrapedCatalog): Catalog {
     // Prefer real scraped products (from hotspot crops) over curated mock data
     const scrapedProducts = (scraped.products || []).filter(sp => sp.name);
     const products: CatalogProduct[] = scrapedProducts.length > 0
-        ? scrapedProducts.map((sp) => ({
-            slug: slugify(sp.name) || `oferta-${sp.id.substring(0, 8)}`,
-            name: sp.name,
-            newPrice: sp.price,
-            oldPrice: sp.oldPrice || undefined,
-            discount: sp.discount || undefined,
-            category: 'Oferte',
-            categorySlug: 'oferte',
-            imageUrl: sp.imagePath || undefined,
-            description: sp.description || undefined,
-        }))
+        ? scrapedProducts.map((sp) => {
+            // Combine name + description for a complete product name
+            // e.g. "Zahăr" + "1 kg" → "Zahăr — 1 kg"
+            const fullName = sp.description && !sp.name.toLowerCase().includes(sp.description.toLowerCase())
+                ? `${sp.name} — ${sp.description}`
+                : sp.name;
+            return {
+                slug: slugify(sp.name) || `oferta-${sp.id.substring(0, 8)}`,
+                name: fullName,
+                newPrice: sp.price,
+                oldPrice: sp.oldPrice || undefined,
+                discount: sp.discount || undefined,
+                category: 'Oferte',
+                categorySlug: 'oferte',
+                imageUrl: sp.imagePath || undefined,
+                description: sp.description || undefined,
+            };
+        })
         : productsForCatalog(scraped.title);
 
     return {
