@@ -234,63 +234,66 @@ async function cropHotspot(pageImagePath, hotspot, outPath) {
 }
 
 /**
- * Extract product metadata (name, price, oldPrice, discount) from tiendeo
- * catalog detail page.  Uses __NEXT_DATA__ → flyerGibsData which has full
- * pricing including starting_price (old) and sale (discount %).
- * Falls back to JSON-LD (name + price only) if __NEXT_DATA__ is absent.
+ * Extract ALL product data from tiendeo detail page's __NEXT_DATA__ → flyerGibsData.
+ * Each flyerGib contains: id, title, description, image_url (CDN crop), price,
+ * starting_price, sale, flyer_page — everything we need in one place.
+ * Returns array of fully-formed product objects (not a Map).
  */
-function extractProductMeta(detailHtml) {
-    const meta = new Map();
+function extractProducts(detailHtml) {
+    const products = [];
 
-    // Primary: __NEXT_DATA__ → flyerGibsData (has oldPrice + discount)
     const nextMatch = detailHtml.match(/<script id="__NEXT_DATA__" type="application\/json">([\s\S]*?)<\/script>/);
-    if (nextMatch) {
-        try {
-            const nd = JSON.parse(nextMatch[1]);
-            const gibs = nd.props?.pageProps?.apiResources?.flyerGibsData?.flyerGibs;
-            if (Array.isArray(gibs)) {
-                for (const g of gibs) {
-                    if (!g.id) continue;
-                    const s = g.settings || {};
-                    meta.set(g.id, {
-                        name: g.title || '',
-                        price: parseFloat(s.price_extended?.digits) || 0,
-                        oldPrice: parseFloat(s.starting_price?.digits) || 0,
-                        discount: s.sale || '',
-                    });
-                }
+    if (!nextMatch) return products;
+
+    try {
+        const nd = JSON.parse(nextMatch[1]);
+        const gibs = nd.props?.pageProps?.apiResources?.flyerGibsData?.flyerGibs;
+        if (!Array.isArray(gibs)) return products;
+
+        for (const g of gibs) {
+            if (!g.id || g.type !== 'crop') continue;
+            const s = g.settings || {};
+
+            const name = (g.title || '').replace(/[\t\r\n]+/g, ' ').replace(/\s+/g, ' ').trim();
+            if (!name) continue;
+
+            const price = parseFloat(s.price_extended?.digits) || 0;
+            const oldPrice = parseFloat(s.starting_price?.digits) || 0;
+
+            // Calculate real discount from prices (more reliable than s.sale text)
+            let discount = '';
+            if (oldPrice > 0 && price > 0 && oldPrice > price) {
+                const pct = Math.round((1 - price / oldPrice) * 100);
+                discount = `-${pct}%`;
+            } else if (s.sale && typeof s.sale === 'string' && s.sale.includes('%')) {
+                discount = s.sale;
+            } else if (s.sale) {
+                // Non-percentage promo text like "3 la pret de 2"
+                discount = s.sale;
             }
-        } catch {
-            // Fall through to JSON-LD
+
+            const description = (g.description || '').replace(/[\t\r\n]+/g, ' ').trim();
+            const page = parseInt(s.flyer_page) || 1;
+            const imageUrl = g.image || s.image_url || '';
+
+            products.push({
+                id: g.id,
+                name,
+                description,
+                price,
+                oldPrice,
+                discount,
+                page,
+                imageUrl,  // CDN image — no manual cropping needed
+                imagePath: '',  // will be set after download
+                landingUrl: g.href || '',
+            });
         }
+    } catch {
+        // Skip on parse error
     }
 
-    // Fallback: JSON-LD Product blocks (no oldPrice / discount)
-    if (meta.size === 0) {
-        const ldBlocks = detailHtml.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/gi) || [];
-        for (const block of ldBlocks) {
-            try {
-                const json = block.replace(/<script[^>]*>/, '').replace(/<\/script>/, '').trim();
-                const data = JSON.parse(json);
-                const items = Array.isArray(data) ? data : [data];
-                for (const item of items) {
-                    if (item['@type'] !== 'Product') continue;
-                    const idMatch = (item.image || '').match(/crop_([a-f0-9-]+)/);
-                    if (!idMatch) continue;
-                    meta.set(idMatch[1], {
-                        name: item.name || '',
-                        price: parseFloat(item.offers?.price) || 0,
-                        oldPrice: 0,
-                        discount: '',
-                    });
-                }
-            } catch {
-                // Skip malformed blocks
-            }
-        }
-    }
-
-    return meta;
+    return products;
 }
 
 async function scrapeCatalog(catalog) {
@@ -360,61 +363,31 @@ async function scrapeCatalog(catalog) {
     }
     console.log(`\n  total: ${(totalBytes / 1024 / 1024).toFixed(2)}MB`);
 
-    // Step 4: enrichments — fetch by 10-page bundles, not per-page
-    const enrichmentsByPage = {};
-    const maxPage = Math.max(...pageKeys.map(Number));
-    const numBundles = Math.ceil(maxPage / 10);
-    for (let bundle = 1; bundle <= numBundles; bundle++) {
-        try {
-            const enrRaw = (await fetchUrl(ENRICH_API(pubId, bundle))).toString('utf-8');
-            const enrJson = JSON.parse(enrRaw);
-            const parsed = parseEnrichmentBundle(enrJson);
-            Object.assign(enrichmentsByPage, parsed);
-        } catch {
-            // Enrichment is optional — skip silently
-        }
-    }
-    const totalHotspots = Object.values(enrichmentsByPage).reduce((s, arr) => s + arr.length, 0);
-    console.log(`  hotspots: ${totalHotspots} (${numBundles} bundle${numBundles > 1 ? 's' : ''})`);
+    // Step 4: extract products from flyerGibs (complete data: name, price, image, page)
+    const products = extractProducts(detailHtml);
+    console.log(`  products: ${products.length} from flyerGibs`);
 
-    // Step 5: extract product names & prices from tiendeo detail page JSON-LD
-    const productMeta = extractProductMeta(detailHtml);
-    console.log(`  meta: ${productMeta.size} products with name/price`);
-
-    // Step 6: crop product thumbnails from page images
+    // Step 5: download product images from Shopfully CDN
     const cropsDir = path.join(OUTPUT_DIR, slug, 'crops');
-    const products = [];
-    let cropCount = 0;
-    for (const [pageKey, hotspots] of Object.entries(enrichmentsByPage)) {
-        const pageEntry = pageEntries.find(p => p.pageNumber === Number(pageKey));
-        if (!pageEntry) continue;
-        const pageFile = path.join(__dirname, '..', 'public', pageEntry.imagePath);
-        if (!fs.existsSync(pageFile)) continue;
-
-        for (const hs of hotspots) {
-            const cropFile = path.join(cropsDir, `${hs.id}.webp`);
-            const cropPath = `/catalogs/${slug}/crops/${hs.id}.webp`;
-            try {
-                await cropHotspot(pageFile, hs, cropFile);
-                cropCount++;
-                const meta = productMeta.get(hs.id);
-                products.push({
-                    id: hs.id,
-                    name: meta?.name || '',
-                    price: meta?.price || 0,
-                    oldPrice: meta?.oldPrice || 0,
-                    discount: meta?.discount || '',
-                    page: hs.page,
-                    imagePath: cropPath,
-                    crop: hs.crop,
-                    landingUrl: hs.landingUrl,
-                });
-            } catch (err) {
-                // Skip failed crops silently
-            }
+    let downloadCount = 0;
+    for (const product of products) {
+        if (!product.imageUrl) continue;
+        const ext = product.imageUrl.includes('.webp') ? 'webp' : 'png';
+        const localFile = path.join(cropsDir, `${product.id}.${ext}`);
+        const localPath = `/catalogs/${slug}/crops/${product.id}.${ext}`;
+        try {
+            const url = product.imageUrl.startsWith('http') ? product.imageUrl : `https://${product.imageUrl}`;
+            await downloadImage(url, localFile);
+            product.imagePath = localPath;
+            downloadCount++;
+        } catch {
+            // Keep product without image
         }
     }
-    console.log(`  crops: ${cropCount} product thumbnails`);
+    console.log(`  images: ${downloadCount} downloaded from CDN`);
+
+    // Enrichments no longer needed for product extraction
+    const enrichmentsByPage = {};
 
     return {
         slug,

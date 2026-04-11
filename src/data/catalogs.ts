@@ -140,12 +140,14 @@ interface ScrapedHotspot {
 interface ScrapedProduct {
     id: string;
     name: string;
+    description?: string;
     price: number;
     oldPrice: number;
     discount: string;
     page: number;
     imagePath: string;
-    crop: { x: number; y: number; w: number; h: number };
+    imageUrl?: string;
+    crop?: { x: number; y: number; w: number; h: number };
     landingUrl: string;
 }
 
@@ -204,7 +206,8 @@ function buildFromScraped(scraped: ScrapedCatalog): Catalog {
             discount: sp.discount || undefined,
             category: 'Oferte',
             categorySlug: 'oferte',
-            imageUrl: sp.imagePath,
+            imageUrl: sp.imagePath || undefined,
+            description: sp.description || undefined,
         }))
         : productsForCatalog(scraped.title);
 
