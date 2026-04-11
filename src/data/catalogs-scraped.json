@@ -86,7 +86,7 @@
       },
       {
         "id": "69ccb6b3-2ddc-4195-9cea-29bc0ad302f8",
-        "name": "Kashkaval Cheese",
+        "name": "Cașcaval",
         "description": "750g",
         "price": 23.99,
         "oldPrice": 31.99,
@@ -110,7 +110,7 @@
       },
       {
         "id": "69ccb6b4-80bc-4344-87d5-26070ad300c5",
-        "name": "Almonds",
+        "name": "Migdale",
         "description": "Migdale prăjite",
         "price": 7.49,
         "oldPrice": 10.19,
@@ -518,7 +518,7 @@
       },
       {
         "id": "69ccb6c4-d11c-49c9-9961-33d70ad301f9",
-        "name": "Antipasti Plate Greek Style",
+        "name": "Platou antipasti stil grecesc",
         "description": "560 g",
         "price": 36.99,
         "oldPrice": 0,
@@ -530,7 +530,7 @@
       },
       {
         "id": "69ccb6c5-0d88-45d7-851d-3d560ad30111",
-        "name": "Frozen - Passion Fruit Ice Cream with Sparkling Wine Flavour in Champagne Glass",
+        "name": "Passion Fruit Ice Cream with Sparkling Wine Flavour in Champagne Glass",
         "description": "4 x 70 g",
         "price": 34.99,
         "oldPrice": 0,
@@ -578,7 +578,7 @@
       },
       {
         "id": "69ccb6c7-6854-40be-bf45-00b90ad3022a",
-        "name": "Vegetable Chips with Sea Salt",
+        "name": "Chips de legume cu sare de mare",
         "description": "100 g",
         "price": 9.99,
         "oldPrice": 0,
@@ -602,7 +602,7 @@
       },
       {
         "id": "69ccb6c8-18ac-410f-bd46-459e0ad30148",
-        "name": "Frozen - Arancini cu trufe și șofran",
+        "name": "Arancini cu trufe și șofran",
         "description": "175 g",
         "price": 12.99,
         "oldPrice": 0,
@@ -626,7 +626,7 @@
       },
       {
         "id": "69ccb6c9-2a3c-4ef3-bad8-410f0ad300d5",
-        "name": "Dried Tomatoes with Rosemary",
+        "name": "Roșii uscate cu rozmarin",
         "description": "masă solidă: 110 g",
         "price": 6.99,
         "oldPrice": 0,
@@ -674,7 +674,7 @@
       }
     ],
     "isActive": true,
-    "scrapedAt": "2026-04-11T11:23:51.925Z"
+    "scrapedAt": "2026-04-11T15:26:58.131Z"
   },
   {
     "slug": "silvercrest-2026-03-30",
@@ -1219,7 +1219,7 @@
       }
     ],
     "isActive": true,
-    "scrapedAt": "2026-04-11T11:23:55.546Z"
+    "scrapedAt": "2026-04-11T15:27:00.535Z"
   },
   {
     "slug": "de-vinuri-2026-02-23",
@@ -1884,7 +1884,7 @@
       },
       {
         "id": "69cf580c-4fa4-49cc-b69f-1b270ad300c4",
-        "name": "Wine Chocolate",
+        "name": "Ciocolată cu vin",
         "description": "Sweet",
         "price": 36.69,
         "oldPrice": 0,
@@ -1896,7 +1896,7 @@
       }
     ],
     "isActive": true,
-    "scrapedAt": "2026-04-11T11:23:41.853Z"
+    "scrapedAt": "2026-04-11T15:26:52.668Z"
   },
   {
     "slug": "de-marti-14-04-pana-duminica-19-04-2026-04-14",
@@ -2237,6 +2237,6 @@
       }
     ],
     "isActive": false,
-    "scrapedAt": "2026-04-11T11:23:31.501Z"
+    "scrapedAt": "2026-04-11T15:26:49.360Z"
   }
 ]

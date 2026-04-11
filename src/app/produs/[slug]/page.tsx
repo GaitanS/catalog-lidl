@@ -23,6 +23,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     const title = `${product.name} ${product.unit ? product.unit + ' ' : ''}${priceStr ? priceStr + ' ' : ''}Lidl`;
     const description = `${product.name}${product.brand ? ` ${product.brand}` : ''}${product.unit ? ` (${product.unit})` : ''} la Lidl${priceStr ? ` — preț ${priceStr}` : ''}${product.oldPrice ? ` (reducere ${product.discount} de la ${product.oldPrice.toFixed(2)} lei)` : ''}. Valabil ${catalog.startDate} — ${catalog.endDate}.`;
 
+    const ogImage = product.imageUrl
+        ? (product.imageUrl.startsWith('http') ? product.imageUrl : `https://cataloglidl.ro${product.imageUrl}`)
+        : undefined;
+
     return {
         title,
         description,
@@ -31,6 +35,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
             description,
             url: `https://cataloglidl.ro/produs/${slug}`,
             type: 'website',
+            ...(ogImage ? { images: [{ url: ogImage }] } : {}),
         },
         alternates: {
             canonical: `https://cataloglidl.ro/produs/${slug}`,
@@ -55,10 +60,15 @@ export default async function ProductPage({ params }: PageProps) {
     const savings = product.oldPrice ? product.oldPrice - product.newPrice : 0;
 
     // JSON-LD Product schema (safe: server-rendered with controlled data only)
+    const imageUrl = product.imageUrl
+        ? (product.imageUrl.startsWith('http') ? product.imageUrl : `https://cataloglidl.ro${product.imageUrl}`)
+        : `https://cataloglidl.ro${catalog.coverImage}`;
+
     const productLd = {
         '@context': 'https://schema.org',
         '@type': 'Product',
         name: product.name,
+        image: imageUrl,
         description: product.description || `${product.name} la Lidl România`,
         brand: { '@type': 'Brand', name: product.brand || 'Lidl' },
         category: product.category,
@@ -70,6 +80,21 @@ export default async function ProductPage({ params }: PageProps) {
             priceValidUntil: catalog.endDate,
             availability: 'https://schema.org/InStock',
             seller: { '@type': 'Organization', name: 'Lidl România' },
+            shippingDetails: {
+                '@type': 'OfferShippingDetails',
+                shippingDestination: {
+                    '@type': 'DefinedRegion',
+                    addressCountry: 'RO',
+                },
+                doesNotShip: true,
+            },
+            hasMerchantReturnPolicy: {
+                '@type': 'MerchantReturnPolicy',
+                applicableCountry: 'RO',
+                returnPolicyCategory: 'https://schema.org/MerchantReturnFiniteReturnWindow',
+                merchantReturnDays: 30,
+                returnMethod: 'https://schema.org/ReturnInStore',
+            },
         },
     };
 

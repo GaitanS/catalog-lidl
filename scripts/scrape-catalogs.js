@@ -233,6 +233,28 @@ async function cropHotspot(pageImagePath, hotspot, outPath) {
 }
 
 /**
+ * Translate common English/non-Romanian product names to Romanian.
+ */
+const NAME_TRANSLATIONS = {
+    'almonds': 'Migdale',
+    'kashkaval cheese': 'Cașcaval',
+    'antipasti plate greek style': 'Platou antipasti stil grecesc',
+    'vegetable chips with sea salt': 'Chips de legume cu sare de mare',
+    'dried tomatoes with rosemary': 'Roșii uscate cu rozmarin',
+    'wine chocolate': 'Ciocolată cu vin',
+};
+
+function translateName(name) {
+    const key = name.toLowerCase().trim();
+    if (NAME_TRANSLATIONS[key]) return NAME_TRANSLATIONS[key];
+    // Strip "Frozen - " prefix
+    if (key.startsWith('frozen - ') || key.startsWith('frozen -')) {
+        return name.replace(/^Frozen\s*-\s*/i, '');
+    }
+    return name;
+}
+
+/**
  * Extract ALL product data from tiendeo detail page's __NEXT_DATA__ → flyerGibsData.
  * Each flyerGib contains: id, title, description, image_url (CDN crop), price,
  * starting_price, sale, flyer_page — everything we need in one place.
@@ -253,8 +275,9 @@ function extractProducts(detailHtml) {
             if (!g.id || g.type !== 'crop') continue;
             const s = g.settings || {};
 
-            const name = (g.title || '').replace(/[\t\r\n]+/g, ' ').replace(/\s+/g, ' ').trim();
-            if (!name) continue;
+            const rawName = (g.title || '').replace(/[\t\r\n]+/g, ' ').replace(/\s+/g, ' ').trim();
+            if (!rawName) continue;
+            const name = translateName(rawName);
 
             const price = parseFloat(s.price_extended?.digits) || 0;
             const oldPrice = parseFloat(s.starting_price?.digits) || 0;
