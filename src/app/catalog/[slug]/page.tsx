@@ -50,7 +50,10 @@ export default async function CatalogPage({ params }: PageProps) {
     const daysLeft = daysUntil(catalog.endDate);
     const isExpired = daysLeft < 0;
 
-    // JSON-LD for the catalog
+    // JSON-LD for the catalog. jsonLd() escapes `<` to prevent any scraped value
+    // from closing the surrounding script tag via "</script>".
+    const jsonLd = (obj: unknown) => JSON.stringify(obj).replace(/</g, '\\u003c');
+
     const catalogLd = {
         '@context': 'https://schema.org',
         '@type': 'OfferCatalog',
@@ -72,7 +75,10 @@ export default async function CatalogPage({ params }: PageProps) {
 
     return (
         <>
-            <script type="application/ld+json">{JSON.stringify(catalogLd)}</script>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: jsonLd(catalogLd) }}
+            />
 
             <div className="max-w-3xl mx-auto px-3 md:px-4 py-4">
                 {/* Breadcrumb */}

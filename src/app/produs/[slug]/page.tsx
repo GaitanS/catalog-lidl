@@ -59,7 +59,11 @@ export default async function ProductPage({ params }: PageProps) {
 
     const savings = product.oldPrice ? product.oldPrice - product.newPrice : 0;
 
-    // JSON-LD Product schema (safe: server-rendered with controlled data only)
+    // JSON-LD Product schema (safe: server-rendered with controlled data only).
+    // jsonLd() below replaces `</` with `<\/` so no stringified value can close the
+    // surrounding <script> tag, even if scraped data ever contains "</script>".
+    const jsonLd = (obj: unknown) => JSON.stringify(obj).replace(/</g, '\\u003c');
+
     const imageUrl = product.imageUrl
         ? (product.imageUrl.startsWith('http') ? product.imageUrl : `https://cataloglidl.ro${product.imageUrl}`)
         : `https://cataloglidl.ro${catalog.coverImage}`;
@@ -94,6 +98,7 @@ export default async function ProductPage({ params }: PageProps) {
                 returnPolicyCategory: 'https://schema.org/MerchantReturnFiniteReturnWindow',
                 merchantReturnDays: 30,
                 returnMethod: 'https://schema.org/ReturnInStore',
+                returnFees: 'https://schema.org/FreeReturn',
             },
         },
     };
@@ -110,8 +115,14 @@ export default async function ProductPage({ params }: PageProps) {
 
     return (
         <>
-            <script type="application/ld+json">{JSON.stringify(productLd)}</script>
-            <script type="application/ld+json">{JSON.stringify(breadcrumbLd)}</script>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: jsonLd(productLd) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: jsonLd(breadcrumbLd) }}
+            />
 
             <div className="max-w-4xl mx-auto px-4 py-6">
                 {/* Breadcrumb */}
