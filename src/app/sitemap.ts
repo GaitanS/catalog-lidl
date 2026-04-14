@@ -8,16 +8,30 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const allCatalogs = getAllCatalogs();
     const activeCatalogs = getActiveCatalogs();
 
-    // Only include products from catalogs that are still active (end date >= today).
-    // Expired-catalog products get removed from the sitemap so Google stops wasting crawl
-    // budget on stale URLs that will 404 or redirect after the catalog rotates.
-    const activeProductSlugs = new Set<string>();
-    const productLastMod = new Map<string, string>();
-    activeCatalogs.forEach(c => {
+    // Include every product that is reachable on the site (all catalogs, not just active),
+    // so products that already rank on Google don't silently drop out of the sitemap when
+    // a catalog expires. Products from active catalogs get higher priority and a today
+    // lastmod; products from expired catalogs get lower priority and their catalog's
+    // startDate, which lets Google understand they're older but still indexable.
+    const activeSlugs = new Set<string>();
+    activeCatalogs.forEach(c => c.products.forEach(p => activeSlugs.add(p.slug)));
+
+    type ProductEntry = { slug: string; lastMod: string; active: boolean };
+    const seen = new Map<string, ProductEntry>();
+    allCatalogs.forEach(c => {
         c.products.forEach(p => {
-            if (!activeProductSlugs.has(p.slug)) {
-                activeProductSlugs.add(p.slug);
-                productLastMod.set(p.slug, c.startDate);
+            const existing = seen.get(p.slug);
+            const entry: ProductEntry = {
+                slug: p.slug,
+                lastMod: c.startDate,
+                active: activeSlugs.has(p.slug),
+            };
+            // Prefer the most recent catalog's startDate and always keep an active flag
+            // if any catalog containing this product is currently active.
+            if (!existing || c.startDate > existing.lastMod) {
+                seen.set(p.slug, { ...entry, active: entry.active || existing?.active || false });
+            } else if (existing && entry.active) {
+                existing.active = true;
             }
         });
     });
@@ -50,29 +64,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
         priority: 0.8,
     }));
 
-    // Active catalogs get high priority; recently-expired ones stay in sitemap with
-    // lower priority so Google can update the index, but older ones drop off entirely.
-    const twoWeeksAgo = new Date();
-    twoWeeksAgo.setDate(twoWeeksAgo.getDate() - 14);
-    const twoWeeksAgoStr = twoWeeksAgo.toISOString().split('T')[0];
+    const catalogPages: MetadataRoute.Sitemap = allCatalogs.map(c => {
+        const isActive = c.endDate >= today;
+        return {
+            url: `${baseUrl}/catalog/${c.slug}`,
+            lastModified: c.startDate,
+            changeFrequency: (isActive ? 'weekly' : 'monthly') as 'weekly' | 'monthly',
+            priority: isActive ? 0.9 : 0.5,
+        };
+    });
 
-    const catalogPages: MetadataRoute.Sitemap = allCatalogs
-        .filter(c => c.endDate >= twoWeeksAgoStr)
-        .map(c => {
-            const isActive = c.endDate >= today;
-            return {
-                url: `${baseUrl}/catalog/${c.slug}`,
-                lastModified: c.startDate,
-                changeFrequency: (isActive ? 'weekly' : 'monthly') as 'weekly' | 'monthly',
-                priority: isActive ? 0.9 : 0.4,
-            };
-        });
-
-    const productPages: MetadataRoute.Sitemap = Array.from(activeProductSlugs).map(slug => ({
-        url: `${baseUrl}/produs/${slug}`,
-        lastModified: productLastMod.get(slug) || today,
-        changeFrequency: 'weekly' as const,
-        priority: 0.7,
+    const productPages: MetadataRoute.Sitemap = Array.from(seen.values()).map(p => ({
+        url: `${baseUrl}/produs/${p.slug}`,
+        lastModified: p.active ? today : p.lastMod,
+        changeFrequency: (p.active ? 'weekly' : 'monthly') as 'weekly' | 'monthly',
+        priority: p.active ? 0.75 : 0.5,
     }));
 
     return [...staticPages, ...cityPages, ...categoryPages, ...catalogPages, ...productPages];
