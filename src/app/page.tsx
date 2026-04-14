@@ -187,19 +187,46 @@ export default function HomePage() {
 
                 {/* SEO content — why us vs Lidl Plus */}
                 <section className="mb-8 bg-white rounded-2xl border border-gray-100 p-5 md:p-8 shadow-sm">
-                    <h2 className="text-lg md:text-xl font-bold text-gray-900 mb-3">De ce cataloglidl.ro?</h2>
+                    <h2 className="text-lg md:text-xl font-bold text-gray-900 mb-3">
+                        Catalog Lidl Săptămâna Aceasta — Tot Ce Trebuie Să Știi
+                    </h2>
                     <div className="text-sm text-gray-700 space-y-3 leading-relaxed">
                         <p>
-                            <strong>Lidl Plus e complicat. Aici e simplu.</strong> Nu e nevoie să instalezi nimic. Nu e nevoie de cont. Nu e nevoie de SMS.
-                            Deschizi pagina, vezi ofertele, găsești produsul căutat, îl adaugi pe listă. Gata.
+                            Pe <strong>cataloglidl.ro</strong> găsești catalogul Lidl actualizat în fiecare luni și joi, cu toate
+                            ofertele, reducerile și promoțiile din magazinele Lidl România. Nu e nevoie de cont, nu e nevoie de
+                            aplicație și nu trebuie să introduci niciun SMS. Deschizi pagina, vezi ofertele și adaugi produsele
+                            pe lista ta de cumpărături.
                         </p>
                         <p>
-                            Catalogul <strong>se actualizează săptămânal</strong> automat, cu toate reducerile și promoțiile din magazinele Lidl România.
-                            Caută orice produs instant în loc să răsfoiești 40 de pagini. Adaugă ce-ți trebuie în <strong>lista de cumpărături</strong> — cu poze, prețuri și total calculat.
+                            Catalogul principal Lidl e valabil <strong>de luni până duminică</strong>, iar joia apare un catalog
+                            special cu oferte non-food (electrocasnice, textile, produse pentru casă și grădină). Consultă{' '}
+                            <Link href="/oferte-lidl-saptamana-asta" className="text-lidl-blue hover:underline font-medium">
+                                ofertele Lidl de săptămâna aceasta
+                            </Link>
+                            {' '}pentru catalogul complet sau vezi{' '}
+                            <Link href="/arhiva" className="text-lidl-blue hover:underline font-medium">
+                                catalogul Lidl din săptămâna trecută
+                            </Link>
+                            {' '}dacă vrei să compari prețurile.
                         </p>
                         <p>
-                            Dacă vrei cupoanele exclusive Lidl Plus, folosești în continuare aplicația. Dacă vrei doar să vezi ce e la reducere săptămâna asta,
-                            fără friction — <strong>ești exact unde trebuie</strong>.
+                            Reducerile sunt valabile în toate magazinele Lidl din România —{' '}
+                            <Link href="/lidl/bucuresti" className="text-lidl-blue hover:underline">București</Link>,{' '}
+                            <Link href="/lidl/cluj-napoca" className="text-lidl-blue hover:underline">Cluj-Napoca</Link>,{' '}
+                            <Link href="/lidl/timisoara" className="text-lidl-blue hover:underline">Timișoara</Link>,{' '}
+                            <Link href="/lidl/iasi" className="text-lidl-blue hover:underline">Iași</Link>,{' '}
+                            <Link href="/lidl/constanta" className="text-lidl-blue hover:underline">Constanța</Link>,{' '}
+                            <Link href="/lidl/brasov" className="text-lidl-blue hover:underline">Brașov</Link>,{' '}
+                            <Link href="/lidl/craiova" className="text-lidl-blue hover:underline">Craiova</Link>,{' '}
+                            <Link href="/lidl/sibiu" className="text-lidl-blue hover:underline">Sibiu</Link>,{' '}
+                            <Link href="/lidl/bacau" className="text-lidl-blue hover:underline">Bacău</Link>,{' '}
+                            <Link href="/lidl/baia-mare" className="text-lidl-blue hover:underline">Baia Mare</Link> și multe altele.
+                            Pliantul Lidl e același în toată țara.
+                        </p>
+                        <p>
+                            <strong>Lidl Plus e complicat. Aici e simplu.</strong> Dacă vrei cupoanele exclusive, folosești în
+                            continuare aplicația. Dacă vrei doar să vezi ce e la reducere săptămâna asta, fără friction —
+                            ești exact unde trebuie.
                         </p>
                     </div>
 

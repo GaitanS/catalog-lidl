@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next';
 import { getAllCatalogs, getActiveCatalogs } from '@/data/catalogs';
+import { CITIES } from './lidl/[oras]/page';
 
 export default function sitemap(): MetadataRoute.Sitemap {
     const baseUrl = 'https://cataloglidl.ro';
@@ -23,12 +24,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     const staticPages: MetadataRoute.Sitemap = [
         { url: baseUrl, lastModified: today, changeFrequency: 'daily', priority: 1 },
-        { url: `${baseUrl}/arhiva`, lastModified: today, changeFrequency: 'weekly', priority: 0.6 },
+        { url: `${baseUrl}/oferte-lidl-saptamana-asta`, lastModified: today, changeFrequency: 'daily', priority: 0.95 },
+        { url: `${baseUrl}/arhiva`, lastModified: today, changeFrequency: 'weekly', priority: 0.7 },
+        { url: `${baseUrl}/lidl`, lastModified: today, changeFrequency: 'weekly', priority: 0.8 },
         { url: `${baseUrl}/despre`, lastModified: '2026-01-01', changeFrequency: 'yearly', priority: 0.4 },
         { url: `${baseUrl}/contact`, lastModified: '2026-01-01', changeFrequency: 'yearly', priority: 0.4 },
         { url: `${baseUrl}/confidentialitate`, lastModified: '2026-01-01', changeFrequency: 'yearly', priority: 0.2 },
         { url: `${baseUrl}/termeni`, lastModified: '2026-01-01', changeFrequency: 'yearly', priority: 0.2 },
     ];
+
+    const cityPages: MetadataRoute.Sitemap = CITIES.map(c => ({
+        url: `${baseUrl}/lidl/${c.slug}`,
+        lastModified: today,
+        changeFrequency: 'weekly' as const,
+        priority: 0.75,
+    }));
 
     const categoryPages: MetadataRoute.Sitemap = [
         'alimente', 'fructe-si-legume', 'carne-si-mezeluri', 'lactate',
@@ -65,5 +75,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
         priority: 0.7,
     }));
 
-    return [...staticPages, ...categoryPages, ...catalogPages, ...productPages];
+    return [...staticPages, ...cityPages, ...categoryPages, ...catalogPages, ...productPages];
 }

@@ -10,10 +10,10 @@ export default function Footer() {
                     <div>
                         <h3 className="text-white font-bold mb-4">Catalog Lidl</h3>
                         <ul className="space-y-2 text-sm">
-                            <li><Link href="/" className="hover:text-white transition-colors">Catalog Curent</Link></li>
-                            <li><Link href="/arhiva" className="hover:text-white transition-colors">Arhivă Cataloage</Link></li>
-                            <li><Link href="/categorie/alimente" className="hover:text-white transition-colors">Oferte Alimente</Link></li>
-                            <li><Link href="/categorie/non-food" className="hover:text-white transition-colors">Oferte Non-Food</Link></li>
+                            <li><Link href="/" className="hover:text-white transition-colors">Catalog Săptămâna Asta</Link></li>
+                            <li><Link href="/oferte-lidl-saptamana-asta" className="hover:text-white transition-colors">Oferte Lidl Săptămâna Aceasta</Link></li>
+                            <li><Link href="/arhiva" className="hover:text-white transition-colors">Catalog Săptămâna Trecută</Link></li>
+                            <li><Link href="/lidl" className="hover:text-white transition-colors">Magazine Lidl pe Orașe</Link></li>
                         </ul>
                     </div>
                     <div>
@@ -35,10 +35,15 @@ export default function Footer() {
                         </ul>
                     </div>
                     <div>
-                        <h3 className="text-white font-bold mb-4">Lidl România</h3>
-                        <p className="text-sm leading-relaxed">
-                            Catalogul Lidl actualizat săptămânal cu cele mai bune oferte și reduceri din magazinele Lidl România.
-                        </p>
+                        <h3 className="text-white font-bold mb-4">Orașe Populare</h3>
+                        <ul className="space-y-2 text-sm">
+                            <li><Link href="/lidl/bucuresti" className="hover:text-white transition-colors">Lidl București</Link></li>
+                            <li><Link href="/lidl/cluj-napoca" className="hover:text-white transition-colors">Lidl Cluj-Napoca</Link></li>
+                            <li><Link href="/lidl/timisoara" className="hover:text-white transition-colors">Lidl Timișoara</Link></li>
+                            <li><Link href="/lidl/iasi" className="hover:text-white transition-colors">Lidl Iași</Link></li>
+                            <li><Link href="/lidl/constanta" className="hover:text-white transition-colors">Lidl Constanța</Link></li>
+                            <li><Link href="/lidl/brasov" className="hover:text-white transition-colors">Lidl Brașov</Link></li>
+                        </ul>
                         <p className="text-xs mt-4 text-gray-500">
                             * Acest site nu este afiliat oficial cu Lidl.
                         </p>

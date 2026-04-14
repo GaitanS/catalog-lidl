@@ -12,18 +12,21 @@ export default function Header() {
                     <span className="text-lidl-yellow text-sm">.ro</span>
                 </Link>
 
-                <nav className="hidden md:flex items-center gap-6">
+                <nav className="hidden md:flex items-center gap-5">
                     <Link href="/" className="text-white/90 hover:text-white text-sm font-medium transition-colors">
                         Acasă
                     </Link>
+                    <Link href="/oferte-lidl-saptamana-asta" className="text-white/90 hover:text-white text-sm font-medium transition-colors">
+                        Oferte Săptămâna Asta
+                    </Link>
                     <Link href="/arhiva" className="text-white/90 hover:text-white text-sm font-medium transition-colors">
-                        Arhivă Cataloage
+                        Arhivă
+                    </Link>
+                    <Link href="/lidl" className="text-white/90 hover:text-white text-sm font-medium transition-colors">
+                        Magazine Lidl
                     </Link>
                     <Link href="/categorie/alimente" className="text-white/90 hover:text-white text-sm font-medium transition-colors">
                         Alimente
-                    </Link>
-                    <Link href="/categorie/non-food" className="text-white/90 hover:text-white text-sm font-medium transition-colors">
-                        Non-Food
                     </Link>
                 </nav>
 
