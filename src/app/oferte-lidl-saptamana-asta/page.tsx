@@ -29,9 +29,20 @@ function buildDateRange(startDate?: string, endDate?: string): string {
     return `${formatDayMonth(startDate)} – ${formatDayMonth(endDate)} ${formatYear(endDate)}`;
 }
 
+function pickWeeklyCatalog<T extends { startDate: string; endDate: string }>(catalogs: T[]): T | undefined {
+    if (catalogs.length === 0) return undefined;
+    const withDuration = catalogs.map(c => {
+        const start = new Date(c.startDate + 'T00:00:00').getTime();
+        const end = new Date(c.endDate + 'T00:00:00').getTime();
+        return { c, duration: end - start };
+    });
+    withDuration.sort((a, b) => a.duration - b.duration || (b.c.startDate > a.c.startDate ? 1 : -1));
+    return withDuration[0].c;
+}
+
 export async function generateMetadata(): Promise<Metadata> {
     const active = getActiveCatalogs();
-    const main = active[0];
+    const main = pickWeeklyCatalog(active);
     const range = main ? buildDateRange(main.startDate, main.endDate) : '';
     const title = range
         ? `Oferte Lidl Săptămâna Asta (${range}) — Reduceri și Promoții`
@@ -57,7 +68,7 @@ const jsonLdSafe = (obj: unknown) => JSON.stringify(obj).replace(/</g, '\\u003c'
 export default function OferteSaptamanaAstaPage() {
     const active = getActiveCatalogs();
     const products = getAllProducts();
-    const main = active[0];
+    const main = pickWeeklyCatalog(active);
     const range = main ? buildDateRange(main.startDate, main.endDate) : '';
 
     const featured = main
