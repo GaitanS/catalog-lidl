@@ -1,55 +1,123 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import type { Metadata } from 'next';
 import { getActiveCatalogs, getAllProducts } from '@/data/catalogs';
 import CatalogCard from '@/components/CatalogCard';
 import ProductSearch from '@/components/ProductSearch';
 
-export const metadata: Metadata = {
-    title: 'Oferte Lidl Săptămâna Aceasta — Reduceri și Promoții Actuale',
-    description: 'Toate ofertele Lidl pentru săptămâna aceasta: reduceri la alimente, carne, lactate, fructe, legume, dulciuri și non-food. Actualizat în fiecare luni și joi. Fără login, fără aplicație.',
-    alternates: {
-        canonical: 'https://cataloglidl.ro/oferte-lidl-saptamana-asta',
-    },
-    openGraph: {
-        title: 'Oferte Lidl Săptămâna Aceasta',
-        description: 'Toate reducerile Lidl din catalogul săptămânal. Fără login, fără aplicație.',
-        url: 'https://cataloglidl.ro/oferte-lidl-saptamana-asta',
-        type: 'website',
-    },
-};
-
-function formatDate(iso: string): string {
-    return new Date(iso + 'T00:00:00').toLocaleDateString('ro-RO', { day: 'numeric', month: 'long' });
+function formatDayMonth(iso: string): string {
+    const d = new Date(iso + 'T00:00:00');
+    return d.toLocaleDateString('ro-RO', { day: 'numeric', month: 'long' });
 }
+
+function formatShortDay(iso: string): string {
+    return new Date(iso + 'T00:00:00').toLocaleDateString('ro-RO', { day: 'numeric' });
+}
+
+function formatYear(iso: string): string {
+    return new Date(iso + 'T00:00:00').getFullYear().toString();
+}
+
+function buildDateRange(startDate?: string, endDate?: string): string {
+    if (!startDate || !endDate) return '';
+    const startMonth = new Date(startDate + 'T00:00:00').getMonth();
+    const endMonth = new Date(endDate + 'T00:00:00').getMonth();
+    if (startMonth === endMonth) {
+        const month = new Date(endDate + 'T00:00:00').toLocaleDateString('ro-RO', { month: 'long' });
+        return `${formatShortDay(startDate)}–${formatShortDay(endDate)} ${month} ${formatYear(endDate)}`;
+    }
+    return `${formatDayMonth(startDate)} – ${formatDayMonth(endDate)} ${formatYear(endDate)}`;
+}
+
+export async function generateMetadata(): Promise<Metadata> {
+    const active = getActiveCatalogs();
+    const main = active[0];
+    const range = main ? buildDateRange(main.startDate, main.endDate) : '';
+    const title = range
+        ? `Oferte Lidl Săptămâna Asta (${range}) — Reduceri și Promoții`
+        : 'Oferte Lidl Săptămâna Asta — Reduceri și Promoții Actuale';
+    const description = range
+        ? `Toate ofertele Lidl pentru săptămâna asta (${range}): reduceri la alimente, carne, lactate, fructe, legume, dulciuri și non-food. Actualizat în fiecare luni și joi.`
+        : 'Toate ofertele Lidl pentru săptămâna asta: reduceri la alimente, carne, lactate, fructe, legume, dulciuri și non-food. Actualizat în fiecare luni și joi.';
+    return {
+        title,
+        description,
+        alternates: { canonical: 'https://cataloglidl.ro/oferte-lidl-saptamana-asta' },
+        openGraph: {
+            title: `Oferte Lidl Săptămâna Asta${range ? ` (${range})` : ''}`,
+            description,
+            url: 'https://cataloglidl.ro/oferte-lidl-saptamana-asta',
+            type: 'website',
+        },
+    };
+}
+
+const jsonLdSafe = (obj: unknown) => JSON.stringify(obj).replace(/</g, '\\u003c');
 
 export default function OferteSaptamanaAstaPage() {
     const active = getActiveCatalogs();
     const products = getAllProducts();
     const main = active[0];
+    const range = main ? buildDateRange(main.startDate, main.endDate) : '';
 
-    const today = new Date();
-    const weekDay = today.toLocaleDateString('ro-RO', { weekday: 'long' });
-    const currentMonth = today.toLocaleDateString('ro-RO', { month: 'long', year: 'numeric' });
+    const featured = main
+        ? main.products
+            .filter(p => p.oldPrice && p.oldPrice > p.newPrice)
+            .slice(0, 12)
+        : [];
+
+    const itemListLd = featured.length > 0 ? {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: `Oferte Lidl Săptămâna Asta${range ? ` (${range})` : ''}`,
+        numberOfItems: featured.length,
+        itemListElement: featured.map((p, i) => ({
+            '@type': 'ListItem',
+            position: i + 1,
+            item: {
+                '@type': 'Product',
+                name: p.name,
+                url: `https://cataloglidl.ro/produs/${p.slug}`,
+                ...(p.imageUrl ? { image: p.imageUrl } : {}),
+                offers: {
+                    '@type': 'Offer',
+                    priceCurrency: 'RON',
+                    price: p.newPrice.toFixed(2),
+                    availability: 'https://schema.org/InStock',
+                    url: `https://cataloglidl.ro/produs/${p.slug}`,
+                },
+            },
+        })),
+    } : null;
 
     return (
         <div className="max-w-7xl mx-auto px-4 py-6">
+            {itemListLd && (
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: jsonLdSafe(itemListLd) }}
+                />
+            )}
+
             <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs text-gray-500 mb-4">
                 <Link href="/" className="hover:text-lidl-blue">Acasă</Link>
                 <span>›</span>
-                <span className="text-gray-700">Oferte săptămâna aceasta</span>
+                <span className="text-gray-700">Oferte săptămâna asta</span>
             </nav>
 
             <header className="mb-6">
-                <p className="text-xs text-lidl-blue font-semibold uppercase tracking-wide mb-1">
-                    {weekDay.charAt(0).toUpperCase() + weekDay.slice(1)}, {currentMonth}
-                </p>
+                {range && (
+                    <p className="text-xs text-lidl-blue font-semibold uppercase tracking-wide mb-1">
+                        {range}
+                    </p>
+                )}
                 <h1 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-2">
-                    Oferte Lidl Săptămâna Aceasta
+                    Oferte Lidl Săptămâna Asta{range ? ` (${range})` : ''}
                 </h1>
                 <p className="text-gray-600 text-sm md:text-base max-w-2xl">
                     {main ? (
                         <>
-                            Catalogul curent: <strong>{main.title}</strong>, valabil până pe <strong>{formatDate(main.endDate)}</strong>.
+                            Catalogul curent: <strong>{main.title}</strong>, valabil până pe <strong>{formatDayMonth(main.endDate)}</strong>.
                             Toate reducerile săptămânii într-un singur loc — cu prețuri vechi, prețuri noi și procentul economisit.
                         </>
                     ) : (
@@ -57,6 +125,49 @@ export default function OferteSaptamanaAstaPage() {
                     )}
                 </p>
             </header>
+
+            {featured.length > 0 && (
+                <section className="mb-8">
+                    <h2 className="text-lg md:text-xl font-bold text-gray-900 mb-4">
+                        Top reduceri Lidl săptămâna asta
+                    </h2>
+                    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
+                        {featured.map(p => {
+                            const saved = p.oldPrice! - p.newPrice;
+                            return (
+                                <Link
+                                    key={p.slug}
+                                    href={`/produs/${p.slug}`}
+                                    className="bg-white rounded-xl border border-gray-100 p-3 hover:shadow-md transition-shadow flex flex-col"
+                                >
+                                    {p.imageUrl && (
+                                        <div className="relative aspect-square mb-2 bg-gray-50 rounded-lg overflow-hidden">
+                                            <Image
+                                                src={p.imageUrl}
+                                                alt={p.name}
+                                                fill
+                                                sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                                                className="object-contain"
+                                            />
+                                        </div>
+                                    )}
+                                    <h3 className="text-sm font-semibold text-gray-900 line-clamp-2 mb-1">{p.name}</h3>
+                                    {p.unit && <p className="text-xs text-gray-500 mb-2">{p.unit}</p>}
+                                    <div className="mt-auto flex items-baseline gap-2">
+                                        <span className="text-lg font-extrabold text-lidl-red">{p.newPrice.toFixed(2)} lei</span>
+                                        <span className="text-xs text-gray-400 line-through">{p.oldPrice!.toFixed(2)}</span>
+                                    </div>
+                                    {p.discount && (
+                                        <span className="text-xs font-bold text-green-700 mt-1">
+                                            {p.discount} · economisești {saved.toFixed(2)} lei
+                                        </span>
+                                    )}
+                                </Link>
+                            );
+                        })}
+                    </div>
+                </section>
+            )}
 
             {active.length > 0 && (
                 <section className="mb-8">
@@ -72,7 +183,7 @@ export default function OferteSaptamanaAstaPage() {
             {products.length > 0 && (
                 <section className="mb-8">
                     <h2 className="text-lg md:text-xl font-bold text-gray-900 mb-1">
-                        Caută în ofertele Lidl de săptămâna aceasta
+                        Caută în ofertele Lidl de săptămâna asta
                     </h2>
                     <p className="text-xs text-gray-500 mb-4">
                         {products.length} produse în ofertă. Scrie numele produsului pentru a vedea prețul și catalogul în care apare.
