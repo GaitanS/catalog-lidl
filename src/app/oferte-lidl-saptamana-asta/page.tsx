@@ -47,8 +47,9 @@ export async function generateMetadata(): Promise<Metadata> {
     const title = range
         ? `Oferte Lidl Săptămâna Asta (${range}) — Reduceri și Promoții`
         : 'Oferte Lidl Săptămâna Asta — Reduceri și Promoții Actuale';
-    const description = range
-        ? `Toate ofertele Lidl pentru săptămâna asta (${range}): reduceri la alimente, carne, lactate, fructe, legume, dulciuri și non-food. Actualizat în fiecare luni și joi.`
+    const offerCount = main ? main.products.filter(p => p.oldPrice && p.oldPrice > p.newPrice).length : 0;
+    const description = main && offerCount > 0
+        ? `${offerCount} reduceri Lidl active acum (${range}). Vezi prețuri vechi, prețuri noi și procentul economisit pe fiecare produs — alimente, carne, lactate, fructe, legume, dulciuri și non-food.`
         : 'Toate ofertele Lidl pentru săptămâna asta: reduceri la alimente, carne, lactate, fructe, legume, dulciuri și non-food. Actualizat în fiecare luni și joi.';
     return {
         title,

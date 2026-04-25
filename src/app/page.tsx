@@ -1,8 +1,61 @@
 import Link from 'next/link';
+import type { Metadata } from 'next';
 import { getActiveCatalogs, getAllCatalogs, getAllProducts } from '@/data/catalogs';
 import CatalogCard from '@/components/CatalogCard';
 import ProductSearch from '@/components/ProductSearch';
 import NewsletterCapture from '@/components/NewsletterCapture';
+
+function pickWeeklyCatalog<T extends { startDate: string; endDate: string }>(catalogs: T[]): T | undefined {
+    if (catalogs.length === 0) return undefined;
+    const sorted = [...catalogs].sort((a, b) => {
+        const da = new Date(a.endDate).getTime() - new Date(a.startDate).getTime();
+        const db = new Date(b.endDate).getTime() - new Date(b.startDate).getTime();
+        return da - db || (b.startDate > a.startDate ? 1 : -1);
+    });
+    return sorted[0];
+}
+
+function formatRange(startDate?: string, endDate?: string): string {
+    if (!startDate || !endDate) return '';
+    const start = new Date(startDate + 'T00:00:00');
+    const end = new Date(endDate + 'T00:00:00');
+    if (start.getMonth() === end.getMonth()) {
+        const month = end.toLocaleDateString('ro-RO', { month: 'long' });
+        return `${start.getDate()}–${end.getDate()} ${month} ${end.getFullYear()}`;
+    }
+    const startFmt = start.toLocaleDateString('ro-RO', { day: 'numeric', month: 'long' });
+    const endFmt = end.toLocaleDateString('ro-RO', { day: 'numeric', month: 'long' });
+    return `${startFmt} – ${endFmt} ${end.getFullYear()}`;
+}
+
+export async function generateMetadata(): Promise<Metadata> {
+    const active = getActiveCatalogs();
+    const products = getAllProducts();
+    const main = pickWeeklyCatalog(active);
+    const range = main ? formatRange(main.startDate, main.endDate) : '';
+    const productCount = products.length;
+    const catalogCount = active.length;
+
+    const title = range
+        ? `Catalog Lidl Săptămâna Asta (${range}) — ${productCount}+ Oferte Active`
+        : 'Catalog Lidl Săptămâna Asta — Oferte și Reduceri 2026';
+
+    const description = main
+        ? `${productCount} produse cu reduceri în ${catalogCount} cataloage active acum (${range}). Caută, compară prețuri și salvează lista de cumpărături — fără login, fără aplicație Lidl Plus.`
+        : 'Catalog Lidl actualizat în fiecare luni și joi. Vezi toate ofertele, reducerile și promoțiile Lidl România — fără login, fără aplicație.';
+
+    return {
+        title,
+        description,
+        alternates: { canonical: 'https://cataloglidl.ro' },
+        openGraph: {
+            title,
+            description,
+            url: 'https://cataloglidl.ro',
+            type: 'website',
+        },
+    };
+}
 
 export default function HomePage() {
     const activeCatalogs = getActiveCatalogs();
