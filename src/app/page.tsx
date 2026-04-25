@@ -7,10 +7,13 @@ import NewsletterCapture from '@/components/NewsletterCapture';
 
 function pickWeeklyCatalog<T extends { startDate: string; endDate: string }>(catalogs: T[]): T | undefined {
     if (catalogs.length === 0) return undefined;
-    const sorted = [...catalogs].sort((a, b) => {
+    const today = new Date().toISOString().split('T')[0];
+    const containingToday = catalogs.filter(c => c.startDate <= today && c.endDate >= today);
+    const pool = containingToday.length > 0 ? containingToday : catalogs;
+    const sorted = [...pool].sort((a, b) => {
         const da = new Date(a.endDate).getTime() - new Date(a.startDate).getTime();
         const db = new Date(b.endDate).getTime() - new Date(b.startDate).getTime();
-        return da - db || (b.startDate > a.startDate ? 1 : -1);
+        return da - db || (a.endDate < b.endDate ? -1 : 1);
     });
     return sorted[0];
 }

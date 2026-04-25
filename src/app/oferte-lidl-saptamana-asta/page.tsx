@@ -31,13 +31,15 @@ function buildDateRange(startDate?: string, endDate?: string): string {
 
 function pickWeeklyCatalog<T extends { startDate: string; endDate: string }>(catalogs: T[]): T | undefined {
     if (catalogs.length === 0) return undefined;
-    const withDuration = catalogs.map(c => {
-        const start = new Date(c.startDate + 'T00:00:00').getTime();
-        const end = new Date(c.endDate + 'T00:00:00').getTime();
-        return { c, duration: end - start };
+    const today = new Date().toISOString().split('T')[0];
+    const containingToday = catalogs.filter(c => c.startDate <= today && c.endDate >= today);
+    const pool = containingToday.length > 0 ? containingToday : catalogs;
+    const sorted = [...pool].sort((a, b) => {
+        const da = new Date(a.endDate).getTime() - new Date(a.startDate).getTime();
+        const db = new Date(b.endDate).getTime() - new Date(b.startDate).getTime();
+        return da - db || (a.endDate < b.endDate ? -1 : 1);
     });
-    withDuration.sort((a, b) => a.duration - b.duration || (b.c.startDate > a.c.startDate ? 1 : -1));
-    return withDuration[0].c;
+    return sorted[0];
 }
 
 export async function generateMetadata(): Promise<Metadata> {
