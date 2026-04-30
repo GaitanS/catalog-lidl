@@ -26,6 +26,7 @@ function daysLeft(endDate: string): number {
 export default function CatalogCard({ catalog, priority = false }: CatalogCardProps) {
     const active = isActive(catalog);
     const remaining = daysLeft(catalog.endDate);
+    const dateRange = `${formatDate(catalog.startDate)} - ${formatDate(catalog.endDate)}`;
 
     return (
         <Link
@@ -38,7 +39,7 @@ export default function CatalogCard({ catalog, priority = false }: CatalogCardPr
                     /* eslint-disable-next-line @next/next/no-img-element */
                     <img
                         src={catalog.thumbnailImage || catalog.coverImage}
-                        alt={catalog.title}
+                        alt={`Catalog Lidl ${dateRange} - ${catalog.title}`}
                         loading={priority ? "eager" : "lazy"}
                         className="absolute inset-0 w-full h-full object-cover"
                     />
@@ -76,7 +77,7 @@ export default function CatalogCard({ catalog, priority = false }: CatalogCardPr
                     {catalog.title}
                 </h3>
                 <p className="text-xs text-gray-500">
-                    {formatDate(catalog.startDate)} — {formatDate(catalog.endDate)}
+                    {dateRange}
                 </p>
                 {catalog.products.length > 0 && (
                     <p className="text-xs text-lidl-blue font-medium mt-2">

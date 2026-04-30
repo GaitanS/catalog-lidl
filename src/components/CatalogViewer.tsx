@@ -5,6 +5,11 @@ import Link from 'next/link';
 import type { Catalog } from '@/data/catalogs';
 import { AddToListButton } from './ShoppingList';
 
+function formatDate(dateStr: string): string {
+    const d = new Date(`${dateStr}T00:00:00`);
+    return d.toLocaleDateString('ro-RO', { day: '2-digit', month: '2-digit', year: 'numeric' });
+}
+
 export default function CatalogViewer({ catalog }: { catalog: Catalog }) {
     const [currentPage, setCurrentPage] = useState(0);
     const [showProducts, setShowProducts] = useState(false);
@@ -32,6 +37,7 @@ export default function CatalogViewer({ catalog }: { catalog: Catalog }) {
     }, [catalog, currentPage]);
 
     const totalPages = catalog.pages.length;
+    const dateRange = `${formatDate(catalog.startDate)} - ${formatDate(catalog.endDate)}`;
 
     return (
         <>
@@ -80,7 +86,7 @@ export default function CatalogViewer({ catalog }: { catalog: Catalog }) {
                             /* eslint-disable-next-line @next/next/no-img-element */
                             <img
                                 src={catalog.pages[currentPage].imageUrl}
-                                alt={`${catalog.title} — pagina ${currentPage + 1}`}
+                                alt={`Catalog Lidl ${dateRange} - pagina ${currentPage + 1}`}
                                 loading={currentPage === 0 ? 'eager' : 'lazy'}
                                 className="absolute inset-0 w-full h-full object-contain bg-white"
                             />

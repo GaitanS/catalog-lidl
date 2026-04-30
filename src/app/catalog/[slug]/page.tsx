@@ -4,6 +4,7 @@ import type { Metadata } from 'next';
 import { getCatalogBySlug, getAllCatalogs } from '@/data/catalogs';
 import CatalogViewer from '@/components/CatalogViewer';
 import ShareButtons from '@/components/ShareButtons';
+import { getCatalogImageUrl } from '@/lib/seo-landing-pages';
 
 interface PageProps {
     params: Promise<{ slug: string }>;
@@ -18,17 +19,36 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     const catalog = getCatalogBySlug(slug);
     if (!catalog) return { title: 'Catalog negăsit' };
 
+    const range = `${formatShortDate(catalog.startDate)} - ${formatShortDate(catalog.endDate)}`;
+    const title = `Catalog Lidl ${range} | ${catalog.title}`;
+    const image = getCatalogImageUrl(catalog);
+
     return {
-        title: `${catalog.title} — Vezi Ofertele Lidl`,
-        description: catalog.description,
+        title,
+        description: `${catalog.description} Răsfoiește online catalogul Lidl ${range}, cu pagini, produse și oferte valabile în România.`,
         openGraph: {
-            title: catalog.title,
+            title,
             description: catalog.description,
             url: `https://cataloglidl.ro/catalog/${slug}`,
             type: 'website',
+            ...(image ? { images: [{ url: image, alt: `Catalog Lidl ${range}` }] } : {}),
+        },
+        twitter: {
+            card: 'summary_large_image',
+            title,
+            description: catalog.description,
+            ...(image ? { images: [image] } : {}),
         },
         alternates: { canonical: `https://cataloglidl.ro/catalog/${slug}` },
     };
+}
+
+function formatShortDate(iso: string): string {
+    return new Date(`${iso}T00:00:00`).toLocaleDateString('ro-RO', {
+        day: '2-digit',
+        month: '2-digit',
+        year: 'numeric',
+    });
 }
 
 function formatDate(iso: string): string {

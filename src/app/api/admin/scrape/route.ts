@@ -22,8 +22,9 @@ export async function POST(req: NextRequest) {
         status: 'pending',
     }), 'utf-8');
 
-    // Wait for completion (poll for up to 5 minutes)
-    const maxWait = 300000;
+    // Wait for completion (poll for up to 10 minutes). The watcher now runs
+    // scrape + production build + optional PM2 restart, not just the scraper.
+    const maxWait = 600000;
     const pollInterval = 3000;
     const startTime = Date.now();
 
@@ -59,7 +60,7 @@ export async function POST(req: NextRequest) {
         } catch { /* ignore */ }
     }
 
-    return NextResponse.json({ ok: false, error: 'Timeout — scraper-ul nu a raspuns in 5 minute.' }, { status: 504 });
+    return NextResponse.json({ ok: false, error: 'Timeout — scraper-ul nu a raspuns in 10 minute.' }, { status: 504 });
 }
 
 // GET /api/admin/scrape — check scrape status

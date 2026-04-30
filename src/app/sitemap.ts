@@ -1,6 +1,7 @@
 import { MetadataRoute } from 'next';
 import { getAllCatalogs, getActiveCatalogs } from '@/data/catalogs';
 import { CITIES } from './lidl/[oras]/page';
+import { getCatalogImageUrl, getSeoLandingPages } from '@/lib/seo-landing-pages';
 
 export default function sitemap(): MetadataRoute.Sitemap {
     const baseUrl = 'https://cataloglidl.ro';
@@ -16,7 +17,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const activeSlugs = new Set<string>();
     activeCatalogs.forEach(c => c.products.forEach(p => activeSlugs.add(p.slug)));
 
-    type ProductEntry = { slug: string; lastMod: string; active: boolean };
+    type ProductEntry = { slug: string; lastMod: string; active: boolean; imageUrl?: string };
     const seen = new Map<string, ProductEntry>();
     allCatalogs.forEach(c => {
         c.products.forEach(p => {
@@ -25,13 +26,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
                 slug: p.slug,
                 lastMod: c.startDate,
                 active: activeSlugs.has(p.slug),
+                imageUrl: p.imageUrl ? (p.imageUrl.startsWith('http') ? p.imageUrl : `${baseUrl}${p.imageUrl}`) : undefined,
             };
             // Prefer the most recent catalog's startDate and always keep an active flag
             // if any catalog containing this product is currently active.
             if (!existing || c.startDate > existing.lastMod) {
-                seen.set(p.slug, { ...entry, active: entry.active || existing?.active || false });
+                seen.set(p.slug, { ...entry, active: entry.active || existing?.active || false, imageUrl: entry.imageUrl || existing?.imageUrl });
             } else if (existing && entry.active) {
                 existing.active = true;
+                existing.imageUrl = existing.imageUrl || entry.imageUrl;
             }
         });
     });
@@ -54,6 +57,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
         priority: 0.75,
     }));
 
+    const seoLandingPages: MetadataRoute.Sitemap = getSeoLandingPages(allCatalogs, today).map(page => {
+        const image = getCatalogImageUrl(page.primaryCatalog);
+        return {
+            url: page.canonical,
+            lastModified: today,
+            changeFrequency: 'daily' as const,
+            priority: page.slug === 'catalog-lidl-online' ? 0.98 : 0.88,
+            ...(image ? { images: [image] } : {}),
+        };
+    });
+
     const categoryPages: MetadataRoute.Sitemap = [
         'alimente', 'fructe-si-legume', 'carne-si-mezeluri', 'lactate',
         'panificatie', 'dulciuri', 'bauturi', 'curatenie', 'non-food', 'oua',
@@ -66,11 +80,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     const catalogPages: MetadataRoute.Sitemap = allCatalogs.map(c => {
         const isActive = c.endDate >= today;
+        const image = getCatalogImageUrl(c);
         return {
             url: `${baseUrl}/catalog/${c.slug}`,
             lastModified: c.startDate,
             changeFrequency: (isActive ? 'weekly' : 'monthly') as 'weekly' | 'monthly',
             priority: isActive ? 0.9 : 0.5,
+            ...(image ? { images: [image] } : {}),
         };
     });
 
@@ -79,7 +95,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
         lastModified: p.active ? today : p.lastMod,
         changeFrequency: (p.active ? 'weekly' : 'monthly') as 'weekly' | 'monthly',
         priority: p.active ? 0.75 : 0.5,
+        ...(p.imageUrl ? { images: [p.imageUrl] } : {}),
     }));
 
-    return [...staticPages, ...cityPages, ...categoryPages, ...catalogPages, ...productPages];
+    return [...staticPages, ...seoLandingPages, ...cityPages, ...categoryPages, ...catalogPages, ...productPages];
 }

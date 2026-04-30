@@ -4,6 +4,7 @@ import { getActiveCatalogs, getAllCatalogs, getAllProducts } from '@/data/catalo
 import CatalogCard from '@/components/CatalogCard';
 import ProductSearch from '@/components/ProductSearch';
 import NewsletterCapture from '@/components/NewsletterCapture';
+import { getSeoLandingPages } from '@/lib/seo-landing-pages';
 
 function pickWeeklyCatalog<T extends { startDate: string; endDate: string }>(catalogs: T[]): T | undefined {
     if (catalogs.length === 0) return undefined;
@@ -65,6 +66,7 @@ export default function HomePage() {
     const allCatalogs = getAllCatalogs();
     const currentCatalog = activeCatalogs[0];
     const allProducts = getAllProducts();
+    const popularSearchPages = getSeoLandingPages(allCatalogs);
 
     const today = new Date();
     const weekDay = today.toLocaleDateString('ro-RO', { weekday: 'long' });
@@ -182,6 +184,22 @@ export default function HomePage() {
             </div>
 
             <div className="max-w-7xl mx-auto px-4 py-6">
+                {/* Popular SERP intents */}
+                <section className="mb-6">
+                    <h2 className="sr-only">Căutări populare Catalog Lidl</h2>
+                    <div className="flex flex-wrap gap-2">
+                        {popularSearchPages.map(page => (
+                            <Link
+                                key={page.slug}
+                                href={`/${page.slug}`}
+                                className="bg-white border border-gray-200 rounded-full px-3 py-1.5 text-xs font-semibold text-gray-700 hover:border-lidl-blue hover:text-lidl-blue transition-colors"
+                            >
+                                {page.keywords[0]}
+                            </Link>
+                        ))}
+                    </div>
+                </section>
+
                 {/* Active catalogs */}
                 <section className="mb-8">
                     <div className="flex items-center justify-between mb-4">
