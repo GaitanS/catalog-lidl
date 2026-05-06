@@ -122,7 +122,7 @@ const previousWeekProducts: CatalogProduct[] = [
 // Falls back to hardcoded mock catalogs if empty/missing.
 // -----------------------------------------------------------------------------
 import scrapedData from './catalogs-scraped.json';
-import { getProductsForCategoryPage, inferProductCategory } from './category-utils';
+import { getProductsForCategoryPage, inferProductCategory } from './category-utils.ts';
 
 interface ScrapedPage {
     pageNumber: number;
