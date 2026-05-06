@@ -1,10 +1,10 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { getAllProducts, getProductsByCategorySlug } from '@/data/catalogs';
+import { getProductsByCategorySlug } from '@/data/catalogs';
 import ProductSearch from '@/components/ProductSearch';
 
 const categoryMap: Record<string, { name: string; description: string }> = {
-    'alimente': { name: 'Alimente', description: 'Toate ofertele la alimente din catalogul Lidl: fructe, legume, carne, lactate și multe altele.' },
+    'alimente': { name: 'Alimente', description: 'Toate ofertele la alimente din catalogul Lidl: fructe, legume, carne, lactate, panificație, dulciuri și băuturi.' },
     'fructe-si-legume': { name: 'Fructe și Legume', description: 'Oferte la fructe și legume proaspete din catalogul Lidl. Prețuri mici în fiecare săptămână.' },
     'carne-si-mezeluri': { name: 'Carne și Mezeluri', description: 'Oferte la carne proaspătă și mezeluri din catalogul Lidl. Piept de pui, porc, vită și preparate.' },
     'lactate': { name: 'Lactate', description: 'Oferte la produse lactate din catalogul Lidl: lapte, iaurt, brânză, smântână și unt.' },
@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     if (!cat) return { title: 'Categorie' };
 
     return {
-        title: `Oferte Lidl ${cat.name} 2026 — Reduceri Săptămânale`,
+        title: `Oferte Lidl ${cat.name} Săptămâna Asta — Prețuri și Reduceri`,
         description: cat.description,
         alternates: { canonical: `https://cataloglidl.ro/categorie/${slug}` },
     };
@@ -45,7 +45,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
         );
     }
 
-    const products = slug === 'alimente' ? getAllProducts() : getProductsByCategorySlug(slug);
+    const products = getProductsByCategorySlug(slug);
 
     return (
         <div className="max-w-7xl mx-auto px-4 py-6">
@@ -71,6 +71,36 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
                     </p>
                 )}
             </section>
+
+            {slug === 'alimente' && products.length > 0 && (
+                <section className="mb-10 bg-white rounded-2xl border border-gray-100 p-5 md:p-8">
+                    <h2 className="text-lg md:text-xl font-bold text-gray-900 mb-3">
+                        Alimente Lidl în ofertă săptămâna asta
+                    </h2>
+                    <div className="text-sm text-gray-700 space-y-3 leading-relaxed">
+                        <p>
+                            Pagina de alimente include doar produse alimentare din cataloagele active Lidl: fructe și legume,
+                            carne, lactate, panificație, dulciuri și băuturi. Produsele non-food și articolele de curățenie
+                            sunt separate în categoriile lor, ca să poți compara mai ușor prețurile.
+                        </p>
+                        <p>
+                            Pentru oferte proaspete consultă și{' '}
+                            <Link href="/categorie/fructe-si-legume" className="text-lidl-blue hover:underline font-medium">
+                                fructe și legume Lidl
+                            </Link>
+                            ,{' '}
+                            <Link href="/categorie/carne-si-mezeluri" className="text-lidl-blue hover:underline font-medium">
+                                carne și mezeluri
+                            </Link>
+                            {' '}sau pagina cu{' '}
+                            <Link href="/oferte-lidl-saptamana-asta" className="text-lidl-blue hover:underline font-medium">
+                                toate ofertele Lidl de săptămâna asta
+                            </Link>
+                            .
+                        </p>
+                    </div>
+                </section>
+            )}
 
             {/* Other categories */}
             <section>

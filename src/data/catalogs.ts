@@ -122,6 +122,7 @@ const previousWeekProducts: CatalogProduct[] = [
 // Falls back to hardcoded mock catalogs if empty/missing.
 // -----------------------------------------------------------------------------
 import scrapedData from './catalogs-scraped.json';
+import { getProductsForCategoryPage, inferProductCategory } from './category-utils';
 
 interface ScrapedPage {
     pageNumber: number;
@@ -205,14 +206,15 @@ function buildFromScraped(scraped: ScrapedCatalog): Catalog {
             const fullName = sp.description && !sp.name.toLowerCase().includes(sp.description.toLowerCase())
                 ? `${sp.name} — ${sp.description}`
                 : sp.name;
+            const inferredCategory = inferProductCategory(sp.name, sp.description, undefined);
             return {
                 slug: slugify(sp.name) || `oferta-${sp.id.substring(0, 8)}`,
                 name: fullName,
                 newPrice: sp.price,
                 oldPrice: sp.oldPrice || undefined,
                 discount: sp.discount || undefined,
-                category: 'Oferte',
-                categorySlug: 'oferte',
+                category: inferredCategory.category,
+                categorySlug: inferredCategory.categorySlug,
                 imageUrl: sp.imagePath || undefined,
                 description: sp.description || undefined,
             };
@@ -354,7 +356,7 @@ export function getProductsByCategorySlug(categorySlug: string): CatalogProduct[
     const seen = new Set<string>();
     const products: CatalogProduct[] = [];
     catalogs.filter(c => c.isActive).forEach(c => {
-        c.products.filter(p => p.categorySlug === categorySlug).forEach(p => {
+        getProductsForCategoryPage(categorySlug, c.products).forEach(p => {
             if (!seen.has(p.slug)) {
                 seen.add(p.slug);
                 products.push(p);
@@ -365,3 +367,4 @@ export function getProductsByCategorySlug(categorySlug: string): CatalogProduct[
 }
 
 export { slugify };
+export { getProductsForCategoryPage, inferProductCategory };
